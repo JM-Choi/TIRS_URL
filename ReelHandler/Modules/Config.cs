@@ -82,7 +82,7 @@ namespace TechFloor
         }
         public static bool EnableReturnReelTypeWatcher => enableReturnReelTypeWatcher;
         public static bool EnableOneshotRecovery => enableOneshotRecovery;
-        public static bool AutomaticHomeInIdleTime => automaticHomeInIdleTime;
+        public static bool AutomaticHomeInIdleTime => automaticHomeInIdleTime; 
         public static bool EnableRejectReel => enableRejectReel;
         public static bool EnableVisionMarkAdjustment => enableVisionMarkAdjustment;
         public static int ReelTowerLocalServerPort => reelTowerLocalServerPort;
