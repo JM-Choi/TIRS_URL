@@ -1,0 +1,597 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="String_FormMain_buttonInitialize" xml:space="preserve">
+    <value>장비 초기화</value>
+  </data>
+  <data name="String_FormMain_buttonReset" xml:space="preserve">
+    <value>경보 해제</value>
+  </data>
+  <data name="String_FormMain_buttonStart" xml:space="preserve">
+    <value>시작</value>
+  </data>
+  <data name="String_FormMain_buttonStart_CycleStop" xml:space="preserve">
+    <value>사이클 정지</value>
+  </data>
+  <data name="String_FormMain_buttonStop" xml:space="preserve">
+    <value>정지</value>
+  </data>
+  <data name="String_FormMain_buttonVisionStart_Run" xml:space="preserve">
+    <value>실행중</value>
+  </data>
+  <data name="String_FormMain_buttonVisionStart_Stopped" xml:space="preserve">
+    <value>정지됨</value>
+  </data>
+  <data name="String_FormMain_buttonVisionStart_TF_Run" xml:space="preserve">
+    <value>TF 모드</value>
+  </data>
+  <data name="String_FormMain_Communication_State_Listen" xml:space="preserve">
+    <value>접속 대기중</value>
+  </data>
+  <data name="String_FormMain_Notification_Load_Config_Failure" xml:space="preserve">
+    <value>설정 파일과 모델 파일 정보 불러오기 실패하였습니다. 파일 유무와 버전 정보를 확인하세요.</value>
+  </data>
+  <data name="String_FormMain_Notification_Vision_Process_Launch_Failure" xml:space="preserve">
+    <value>이미 비전 프로그램이 실행 중입니다. 실행 중인 비전 프로그램을 종료하고, 재시작 하세요.</value>
+  </data>
+  <data name="String_Generic_DateTime_Format" xml:space="preserve">
+    <value>yyyy-MM-dd HH:mm:ss.fff</value>
+  </data>
+  <data name="String_Clear" xml:space="preserve">
+    <value>지우기</value>
+  </data>
+  <data name="String_FormMain_Cart_Reel_Type_13_Inch" xml:space="preserve">
+    <value>카트 릴 13"</value>
+  </data>
+  <data name="String_FormMain_Cart_Reel_Type_7_Inch" xml:space="preserve">
+    <value>카트 릴 7"</value>
+  </data>
+  <data name="String_FormMain_Communication_State_Accepted" xml:space="preserve">
+    <value>접속 승인</value>
+  </data>
+  <data name="String_FormMain_Communication_State_Connected" xml:space="preserve">
+    <value>통신중</value>
+  </data>
+  <data name="String_FormMain_Communication_State_Connecting" xml:space="preserve">
+    <value>연결중</value>
+  </data>
+  <data name="String_FormMain_Communication_State_Disconnected" xml:space="preserve">
+    <value>연결 끊김</value>
+  </data>
+  <data name="String_FormMain_Communication_State_Socket_Error" xml:space="preserve">
+    <value>통신 장애</value>
+  </data>
+  <data name="String_FormMain_Information_Completed_CycleStop" xml:space="preserve">
+    <value>사이클 정지가 완료 되었습니다.</value>
+  </data>
+  <data name="String_FormMain_Information_Reset_CycleStop" xml:space="preserve">
+    <value>사이클 정지가 해제 되었습니다.</value>
+  </data>
+  <data name="String_FormMain_Information_Set_CycleStop" xml:space="preserve">
+    <value>사이클 정지 설정 되었습니다.</value>
+  </data>
+  <data name="String_FormMain_Information_Wait_Mrbt_Load" xml:space="preserve">
+    <value>자동 카트 로딩을 기다리세요.</value>
+  </data>
+  <data name="String_FormMain_Information_Wait_Mrbt_Unload" xml:space="preserve">
+    <value>자동 카트 언로딩을 기다리세요.</value>
+  </data>
+  <data name="String_FormMain_labelMobileRobotCommunication" xml:space="preserve">
+    <value>MRBT 통신</value>
+  </data>
+  <data name="String_FormMain_labelReelTowerCommunicationState" xml:space="preserve">
+    <value>릴보관함 통신</value>
+  </data>
+  <data name="String_FormMain_labelRobotCommunicationState" xml:space="preserve">
+    <value>로봇 통신</value>
+  </data>
+  <data name="String_FormMain_Notification_Check_Vision_Run" xml:space="preserve">
+    <value>비전 프로그램이 실행 중인지 확인하세요.</value>
+  </data>
+  <data name="String_FormMain_Notification_Dock_Cart" xml:space="preserve">
+    <value>작업 구역으로 카트를 로딩하고, 카트 장착 하세요.</value>
+  </data>
+  <data name="String_FormMain_Notification_Stop_To_Undock_Confirm" xml:space="preserve">
+    <value>카트를 탈착 하기 위해서 먼저 시스템을 정지하세요.</value>
+  </data>
+  <data name="String_FormMain_Notification_Undock_Cart" xml:space="preserve">
+    <value>작업 구역에서 카트를 탈착 하세요.</value>
+  </data>
+  <data name="String_FormMain_Notification_Undock_Confirm" xml:space="preserve">
+    <value>카트를 탈착 하시겠습니까?</value>
+  </data>
+  <data name="String_FormMain_Notification_Vision_Program_Exists" xml:space="preserve">
+    <value>비전 프로그램이 없습니다.</value>
+  </data>
+  <data name="String_FormMain_Question_Exit_Program" xml:space="preserve">
+    <value>프로그램을 종료 하시겠습니까?</value>
+  </data>
+  <data name="String_FormMain_Return_Reel_Type_13_Inch" xml:space="preserve">
+    <value>반납 릴 13"</value>
+  </data>
+  <data name="String_FormMain_Return_Reel_Type_7_Inch" xml:space="preserve">
+    <value>반납 릴 7"</value>
+  </data>
+  <data name="String_FormMain_Robot_Action_State_Completed_Load" xml:space="preserve">
+    <value>투입완료</value>
+  </data>
+  <data name="String_FormMain_Robot_Action_State_Completed_Unload" xml:space="preserve">
+    <value>수취완료</value>
+  </data>
+  <data name="String_FormMain_Robot_Action_State_Do_Loading" xml:space="preserve">
+    <value>투입</value>
+  </data>
+  <data name="String_FormMain_Robot_Action_State_Do_Unloading" xml:space="preserve">
+    <value>수취</value>
+  </data>
+  <data name="String_FormMain_Robot_Action_State_Failed" xml:space="preserve">
+    <value>실패</value>
+  </data>
+  <data name="String_FormMain_Robot_Action_State_Stopped" xml:space="preserve">
+    <value>작업준비</value>
+  </data>
+  <data name="String_FormMain_tabPageConfig" xml:space="preserve">
+    <value>   설정   </value>
+  </data>
+  <data name="String_FormMain_tabPageLog" xml:space="preserve">
+    <value>   이력   </value>
+  </data>
+  <data name="String_FormMain_tabPageMaintenance" xml:space="preserve">
+    <value> 유지보수 </value>
+  </data>
+  <data name="String_FormMain_tabPageOperation" xml:space="preserve">
+    <value> 운영화면 </value>
+  </data>
+  <data name="String_FormMain_tabPageReelTowerLog" xml:space="preserve">
+    <value>  릴보관함  </value>
+  </data>
+  <data name="String_FormMain_tabPageRobotLog" xml:space="preserve">
+    <value>    로봇    </value>
+  </data>
+  <data name="String_FormMain_tabPageVision" xml:space="preserve">
+    <value>    작업영상    </value>
+  </data>
+  <data name="String_Mrbt_Auto_Mode" xml:space="preserve">
+    <value>MRBT 자동</value>
+  </data>
+  <data name="String_Mrbt_Manual_Mode" xml:space="preserve">
+    <value>MRBT 수동</value>
+  </data>
+  <data name="String_Notification" xml:space="preserve">
+    <value>알림</value>
+  </data>
+  <data name="String_Process_Dock" xml:space="preserve">
+    <value>장착</value>
+  </data>
+  <data name="String_Process_Done" xml:space="preserve">
+    <value>완료</value>
+  </data>
+  <data name="String_Process_Idle" xml:space="preserve">
+    <value>대기</value>
+  </data>
+  <data name="String_Process_Load" xml:space="preserve">
+    <value>투입</value>
+  </data>
+  <data name="String_Process_Ready" xml:space="preserve">
+    <value>작업준비</value>
+  </data>
+  <data name="String_Process_State_Loading" xml:space="preserve">
+    <value>투입중</value>
+  </data>
+  <data name="String_Process_State_Unloading" xml:space="preserve">
+    <value>수취중</value>
+  </data>
+  <data name="String_Process_Undock" xml:space="preserve">
+    <value>탈착</value>
+  </data>
+  <data name="String_Process_Unload" xml:space="preserve">
+    <value>수취</value>
+  </data>
+  <data name="String_Reel_Detected" xml:space="preserve">
+    <value>감지됨</value>
+  </data>
+  <data name="String_FormBarcodeInput_buttonApply" xml:space="preserve">
+    <value>투입</value>
+  </data>
+  <data name="String_FormBarcodeInput_buttonBuzzerOff" xml:space="preserve">
+    <value>부저 끄기</value>
+  </data>
+  <data name="String_FormBarcodeInput_buttonClose" xml:space="preserve">
+    <value>재시도</value>
+  </data>
+  <data name="String_FormBarcodeInput_Notification_Mistype_Sid" xml:space="preserve">
+    <value>SID 입력을 확인 하세요.</value>
+  </data>
+  <data name="String_FormBarcodeInput_Notification_Mistype_Uid" xml:space="preserve">
+    <value>UID 와 SID 를 정확히 입력하세요.</value>
+  </data>
+  <data name="String_FormIntialization_buttonCancel" xml:space="preserve">
+    <value>중지</value>
+  </data>
+  <data name="String_Initializing" xml:space="preserve">
+    <value>초기화 중...</value>
+  </data>
+  <data name="String_FormMain_Notification_WaitFor_Reply" xml:space="preserve">
+    <value>릴 보관함의 응답을 대기하고 있습니다.</value>
+  </data>
+  <data name="String_Notificatiion_Empty_Slot" xml:space="preserve">
+    <value>작업 슬롯이 비었습니다. 작업 슬롯을 변경합니다.</value>
+  </data>
+  <data name="String_Notification_Failed_To_Load_Return" xml:space="preserve">
+    <value>반납 릴 로딩을 중지 되었습니다. 자동으로 재시도 합니다.</value>
+  </data>
+  <data name="String_Notification_Refused_Load" xml:space="preserve">
+    <value>릴 보관함에 수취 할 릴 작업이 있습니다.</value>
+  </data>
+  <data name="String_Notification_Required_Cart" xml:space="preserve">
+    <value>작업할 카트를 로딩 하세요.</value>
+  </data>
+  <data name="String_Notification_Return_Stage_Empty" xml:space="preserve">
+    <value>반납 릴 스테이지가 비었습니다.</value>
+  </data>
+  <data name="String_Notification_Check_Vision_State_Stop_Live" xml:space="preserve">
+    <value>작업 영상을 확인하시고, 라이브 영상을 해제하세요.</value>
+  </data>
+  <data name="String_Information_Check_System_Running_Environment" xml:space="preserve">
+    <value>시스템 운영 상태를 확인 하세요.</value>
+  </data>
+  <data name="String_Information_Stop_Process_First" xml:space="preserve">
+    <value>작업을 먼저 정지하세요.</value>
+  </data>
+  <data name="String_Notification_Check_Vision_Program_Path" xml:space="preserve">
+    <value>비전 프로그램 경로를 확인하세요.</value>
+  </data>
+  <data name="String_Warning_Reset_Alarm" xml:space="preserve">
+    <value>경보해제 하세요.</value>
+  </data>
+  <data name="String_Warning_Reset_Cycle_Stop" xml:space="preserve">
+    <value>사이클 정지를 해제하세요.</value>
+  </data>
+  <data name="String_Notification_Robot_Program_State" xml:space="preserve">
+    <value>로봇 프로그램이 Play 상태가 아닙니다. 안전센서와 프로그램을 확인 하세요.</value>
+  </data>
+  <data name="String_Notification_Check_Robot_State" xml:space="preserve">
+    <value>로봇 상태를 확인 하세요.</value>
+  </data>
+  <data name="String_Notification_Completed_Load_Reel_From_Cart" xml:space="preserve">
+    <value>카트의 릴 투입이 완료 되었습니다.</value>
+  </data>
+  <data name="String_Notification_Gripper_State" xml:space="preserve">
+    <value>릴 감지 센서와 gripper 상태를 확인 하세요.</value>
+  </data>
+  <data name="String_Notification_Required_Unload_Cart" xml:space="preserve">
+    <value>작업 완료한 카트를 언로딩 하세요.</value>
+  </data>
+  <data name="String_FormQuedList_Notification_No_Picking_List" xml:space="preserve">
+    <value>릴 보관함에서 수취 할 릴 작업이 없습니다.</value>
+  </data>
+  <data name="String_FormQuedList_Notification_Stop_To_Show_Confirm" xml:space="preserve">
+    <value>작업을 먼저 정지하세요.</value>
+  </data>
+  <data name="String_FormQuedList_Notification_Cleared_Remained_Unload_Requests" xml:space="preserve">
+    <value>PICK LISt 의 수취할 릴 정보를 모두 삭제 합니다.</value>
+  </data>
+  <data name="String_Reel_Barcode_Is_Not_Unique" xml:space="preserve">
+    <value>릴 바코드가 중복 됩니다. 릴 바코드를 확인 하세요.</value>
+  </data>
+  <data name="String_FormMain_tabPageAlarmHistory" xml:space="preserve">
+    <value> 경보 이력 </value>
+  </data>
+  <data name="String_Refresh" xml:space="preserve">
+    <value>새로고침</value>
+  </data>
+  <data name="String_FormMain_labelLoginOperator" xml:space="preserve">
+    <value>작업자 계정</value>
+  </data>
+  <data name="StringExit" xml:space="preserve">
+    <value>종료</value>
+  </data>
+  <data name="String_Abort" xml:space="preserve">
+    <value>중지</value>
+  </data>
+  <data name="String_Assign" xml:space="preserve">
+    <value>할당</value>
+  </data>
+  <data name="String_Auto" xml:space="preserve">
+    <value>자동</value>
+  </data>
+  <data name="String_AutoMode" xml:space="preserve">
+    <value>로봇 배출 모드</value>
+  </data>
+  <data name="String_CleanUp" xml:space="preserve">
+    <value>정보 정리</value>
+  </data>
+  <data name="String_Create" xml:space="preserve">
+    <value>생성</value>
+  </data>
+  <data name="String_Enqueue" xml:space="preserve">
+    <value>배출작업 생성</value>
+  </data>
+  <data name="String_FormLoadReelInformation_labelTitle" xml:space="preserve">
+    <value>투입 물품 정보</value>
+  </data>
+  <data name="String_FormMain_radioButtonJobMonitor" xml:space="preserve">
+    <value>배출작업 화면</value>
+  </data>
+  <data name="String_FormMain_radioButtonLoginOperator" xml:space="preserve">
+    <value>작업자 로그인</value>
+  </data>
+  <data name="String_FormMain_radioButtonSearchReel" xml:space="preserve">
+    <value>물품 검색</value>
+  </data>
+  <data name="String_FormMain_Robot_Action_State_Do_Load" xml:space="preserve">
+    <value>투입</value>
+  </data>
+  <data name="String_FormMain_Robot_Action_State_Do_Unload" xml:space="preserve">
+    <value>배출</value>
+  </data>
+  <data name="String_FormMain_tabPageAccount" xml:space="preserve">
+    <value>계정관리</value>
+  </data>
+  <data name="String_FormMain_tabPageProvideJobLog" xml:space="preserve">
+    <value>작업이력</value>
+  </data>
+  <data name="String_FormMain_tabPageProvideOperation" xml:space="preserve">
+    <value>배출작업</value>
+  </data>
+  <data name="String_FormMain_tabPageReelTowerManager" xml:space="preserve">
+    <value>보관함관리</value>
+  </data>
+  <data name="String_FormMain_tabPageReelTowerNotifier" xml:space="preserve">
+    <value>보관함통지</value>
+  </data>
+  <data name="String_FormMain_tabPageStoreOperation" xml:space="preserve">
+    <value>투입작업</value>
+  </data>
+  <data name="String_Login" xml:space="preserve">
+    <value>로그인</value>
+  </data>
+  <data name="String_Logout" xml:space="preserve">
+    <value>로그아웃</value>
+  </data>
+  <data name="String_ManualMode" xml:space="preserve">
+    <value>수동 배출 모드</value>
+  </data>
+  <data name="String_Ok" xml:space="preserve">
+    <value>확인</value>
+  </data>
+  <data name="String_Query" xml:space="preserve">
+    <value>조회</value>
+  </data>
+  <data name="String_Remove" xml:space="preserve">
+    <value>삭제</value>
+  </data>
+  <data name="String_Request" xml:space="preserve">
+    <value>요청</value>
+  </data>
+  <data name="String_Search" xml:space="preserve">
+    <value>검색</value>
+  </data>
+  <data name="String_Stop" xml:space="preserve">
+    <value>정지</value>
+  </data>
+  <data name="String_FormInitialization_CheckInitializationState" xml:space="preserve">
+    <value>초기화 상태 점검.</value>
+  </data>
+  <data name="String_FormInitialization_CheckNotificationListener" xml:space="preserve">
+    <value>릴 타워 통지 수신 점검.</value>
+  </data>
+  <data name="String_FormInitialization_CheckReelHandler" xml:space="preserve">
+    <value>릴 핸들러 점검.</value>
+  </data>
+  <data name="String_FormInitialization_CheckTtowerInformation" xml:space="preserve">
+    <value>릴 타워 정보 점검.</value>
+  </data>
+  <data name="String_FormInitialization_CompleteInitialization" xml:space="preserve">
+    <value>초기화 완료</value>
+  </data>
+  <data name="String_FormInitialization_FailedInitialization" xml:space="preserve">
+    <value>초기화 실패</value>
+  </data>
+  <data name="String_FormInitialization_InitializeReelTowerGroup" xml:space="preserve">
+    <value>릴 타워 그룹 초기화.</value>
+  </data>
+  <data name="String_FormInitialization_Initializing" xml:space="preserve">
+    <value>초기화 중...</value>
+  </data>
+  <data name="String_FormInitialization_PrepareInitialization" xml:space="preserve">
+    <value>초기화 준비.</value>
+  </data>
+  <data name="String_FormInitialization_ReelTowerGroup" xml:space="preserve">
+    <value>릴 타워 그룹</value>
+  </data>
+  <data name="String_FormLoadMaterialInformation_MessageAbort" xml:space="preserve">
+    <value>릴 타워 ({1}) 에 물품 ({0}) 을 제거 하세요.</value>
+  </data>
+  <data name="String_FormLoadMaterialInformation_MessageAutoRun" xml:space="preserve">
+    <value>릴 타워 ({1}) 에 물품 ({0}) 을 로봇이 투입하고 있습니다.{2}릴 타워 동작 완료 대기 바랍니다.</value>
+  </data>
+  <data name="String_FormLoadMaterialInformation_MessageManualRun" xml:space="preserve">
+    <value>릴 타워 ({1}) 에 물품 ({0}) 을 투입 하세요.{2}확인 버튼을 누르면, 릴 타워로 자동 반입 됩니다.</value>
+  </data>
+  <data name="String_FormMain_Compare_Operator_EqualTo" xml:space="preserve">
+    <value>같다 (==)</value>
+  </data>
+  <data name="String_FormMain_Compare_Operator_GreaterThan" xml:space="preserve">
+    <value>초과 (&gt;)</value>
+  </data>
+  <data name="String_FormMain_Compare_Operator_GreaterThanOrEqualTo" xml:space="preserve">
+    <value>이상 (&gt;=)</value>
+  </data>
+  <data name="String_FormMain_Compare_Operator_LessThan" xml:space="preserve">
+    <value>미만 (&lt;)</value>
+  </data>
+  <data name="String_FormMain_Compare_Operator_LessThanOrEqualTo" xml:space="preserve">
+    <value>이하 (&lt;=)</value>
+  </data>
+  <data name="String_FormMain_Compare_Operator_NotEqualTo" xml:space="preserve">
+    <value>같지 않다 (!=)</value>
+  </data>
+  <data name="String_FormMain_Question_ImportJob" xml:space="preserve">
+    <value>이전 작업이 있습니다.{0}이 작업들을 연속해서 진행 하겠습니까?</value>
+  </data>
+  <data name="String_Warning_Reject_Message_WrongMaterialInformation" xml:space="preserve">
+    <value>릴 보관함 상태 오류 및 릴 정보가 없습니다.</value>
+  </data>
+  <data name="String_Warning_Reject_Message_MaterialInformationNotExist" xml:space="preserve">
+    <value>릴 정보가 없습니다.</value>
+  </data>
+  <data name="String_Warning_Reject_Message_LoadMaterialOperationTimeout" xml:space="preserve">
+    <value>릴 보관함에 투입 작업 시간 초과 하였습니다. ({0})</value>
+  </data>
+  <data name="String_Information_FailedToCreateLoadRequest" xml:space="preserve">
+    <value>릴 ({0}) 에 대한 투입 요청이 실패 하였습니다.</value>
+  </data>
+  <data name="String_Information_LoadReelOnReelTowerTerminal" xml:space="preserve">
+    <value>릴 ({0}) 을 릴 보관함 터미널 포트에 투입하세요.</value>
+  </data>
+  <data name="String_Information_TakeOutProvidedReel" xml:space="preserve">
+    <value>배출된 릴 ({0}) 을 타워 ({1}) 에서 수취하세요.</value>
+  </data>
+  <data name="String_Information_SelectProperMaterialInformation" xml:space="preserve">
+    <value>정확한 물품 타입 정보를 선택하세요.</value>
+  </data>
+  <data name="String_Notification_CheckReelStorageProgramStatus" xml:space="preserve">
+    <value>릴 보관함 프로그램 상태와 라이센스를 확인하고, 재시작 하세요.</value>
+  </data>
+  <data name="String_Notification_RescanTheQrCodeOnReel" xml:space="preserve">
+    <value>릴의 정확한 QR 코드를 스캔 하세요.</value>
+  </data>
+  <data name="String_Question_NotRecognizedQrCodeRetry" xml:space="preserve">
+    <value>릴의 QR 코드가 판독되지 않습니다. 재시도 하세요.{0}({1})</value>
+  </data>
+  <data name="String_FormMain_Cancel" xml:space="preserve">
+    <value>배출 작업 중 입니다. 배출 완료 후 삭제 해주세요.</value>
+  </data>
+  <data name="String_FormMain_tabPageAMM" xml:space="preserve">
+    <value>릴 배출</value>
+  </data>
+  <data name="String_FormMain_tabPageProvideOperation_Monitor" xml:space="preserve">
+    <value>배출 상태</value>
+  </data>
+  <data name="String_FormMain_tabPageProvideOperation_Operator" xml:space="preserve">
+    <value>사번 입력</value>
+  </data>
+  <data name="String_FormMain_tabPageProvideOperation_Search" xml:space="preserve">
+    <value>릴 주문</value>
+  </data>
+  <data name="String_Question_Operation_Mode_Change_During_In_Providing" xml:space="preserve">
+    <value>운영 모드를 배출 작업 중에 임의 변경 하시겠습니까? (경고: 배출 정보 유실)</value>
+  </data>
+</root>

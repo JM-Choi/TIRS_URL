@@ -1,0 +1,721 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="ActionCenterCPL_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ActionCenterCPL_2.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ActionCenterCPL_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ActionCenterCPL_3.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ActionCenterCPL_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ActionCenterCPL_4.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nvwss_9636" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nvwss_9636.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nvwss_9637" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nvwss_9637.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nvwss_9638" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nvwss_9638.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robot_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robot_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robot_1_black" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robot_1_black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robot_1_blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robot_1_blue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robot_1_cyan" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robot_1_cyan.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robot_1_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robot_1_green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robot_1_lime" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robot_1_lime.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robot_1_red" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robot_1_red.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robot_1_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robot_1_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robot_2_black" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robot_2_black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robot_2_blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robot_2_blue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robot_2_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robot_2_green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robot_2_red" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robot_2_red.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robot_2_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robot_2_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robot_2_yellow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robot_2_yellow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="String_Abort" xml:space="preserve">
+    <value>ABORT</value>
+  </data>
+  <data name="String_Assign" xml:space="preserve">
+    <value>ASSIGN</value>
+  </data>
+  <data name="String_Auto" xml:space="preserve">
+    <value>AUTO</value>
+  </data>
+  <data name="String_AutoMode" xml:space="preserve">
+    <value>AUTO MODE</value>
+  </data>
+  <data name="String_Button_OutputStage1" xml:space="preserve">
+    <value>OUTPUT STAGE 1</value>
+  </data>
+  <data name="String_Button_OutputStage2" xml:space="preserve">
+    <value>OUTPUT STAGE 2</value>
+  </data>
+  <data name="String_Button_OutputStage3" xml:space="preserve">
+    <value>OUTPUT STAGE 3</value>
+  </data>
+  <data name="String_CleanUp" xml:space="preserve">
+    <value>CLEAN UP</value>
+  </data>
+  <data name="String_Clear" xml:space="preserve">
+    <value>CLEAR</value>
+  </data>
+  <data name="String_Completed" xml:space="preserve">
+    <value>Completed</value>
+  </data>
+  <data name="String_Create" xml:space="preserve">
+    <value>CREATE</value>
+  </data>
+  <data name="String_Enqueue" xml:space="preserve">
+    <value>ENQUEUE</value>
+  </data>
+  <data name="String_Exit" xml:space="preserve">
+    <value>EXIT</value>
+  </data>
+  <data name="String_FormBarcodeInput_buttonApply" xml:space="preserve">
+    <value>APPLY</value>
+  </data>
+  <data name="String_FormBarcodeInput_buttonBuzzerOff" xml:space="preserve">
+    <value>BUZZER OFF</value>
+  </data>
+  <data name="String_FormBarcodeInput_buttonClose" xml:space="preserve">
+    <value>CLOSE</value>
+  </data>
+  <data name="String_FormBarcodeInput_Notification_Mistype_Sid" xml:space="preserve">
+    <value>Please, type correct sid.</value>
+  </data>
+  <data name="String_FormBarcodeInput_Notification_Mistype_Uid" xml:space="preserve">
+    <value>Please, type correct uid and sid.</value>
+  </data>
+  <data name="String_FormInitialization_CheckInitializationState" xml:space="preserve">
+    <value>Check initialization state.</value>
+  </data>
+  <data name="String_FormInitialization_CheckNotificationListener" xml:space="preserve">
+    <value>Check notification listener.</value>
+  </data>
+  <data name="String_FormInitialization_CheckReelHandler" xml:space="preserve">
+    <value>Check reel handler.</value>
+  </data>
+  <data name="String_FormInitialization_CheckTtowerInformation" xml:space="preserve">
+    <value>Check tower information.</value>
+  </data>
+  <data name="String_FormInitialization_CompleteInitialization" xml:space="preserve">
+    <value>Complete initialization.</value>
+  </data>
+  <data name="String_FormInitialization_FailedInitialization" xml:space="preserve">
+    <value>Failed initialization.</value>
+  </data>
+  <data name="String_FormInitialization_InitializeReelTowerGroup" xml:space="preserve">
+    <value>Initialize reel tower group.</value>
+  </data>
+  <data name="String_FormInitialization_Initializing" xml:space="preserve">
+    <value>Initializing...</value>
+  </data>
+  <data name="String_FormInitialization_PrepareInitialization" xml:space="preserve">
+    <value>Prepare initialization.</value>
+  </data>
+  <data name="String_FormInitialization_ReelTowerGroup" xml:space="preserve">
+    <value>Reel tower group</value>
+  </data>
+  <data name="String_FormIntialization_buttonAbort" xml:space="preserve">
+    <value>ABORT</value>
+  </data>
+  <data name="String_FormLoadMaterialInformation_MessageAbort" xml:space="preserve">
+    <value>Please, remove the reel ({0}) on tower ({1}).</value>
+  </data>
+  <data name="String_FormLoadMaterialInformation_MessageAutoRun" xml:space="preserve">
+    <value>A reel ({0}) is placed on tower ({1}) by robot.{2}Wait for reel tower operation!</value>
+  </data>
+  <data name="String_FormLoadMaterialInformation_MessageManualRun" xml:space="preserve">
+    <value>A reel ({0}) is placed on tower ({1}).{2}Would like to load ?</value>
+  </data>
+  <data name="String_FormLoadReelInformation_labelTitle" xml:space="preserve">
+    <value>LOAD MATERIAL INFORMATION</value>
+  </data>
+  <data name="String_FormMain_buttonInitialize" xml:space="preserve">
+    <value>INITIALIZE</value>
+  </data>
+  <data name="String_FormMain_buttonReset" xml:space="preserve">
+    <value>RESET</value>
+  </data>
+  <data name="String_FormMain_buttonStart" xml:space="preserve">
+    <value>START</value>
+  </data>
+  <data name="String_FormMain_buttonStart_CycleStop" xml:space="preserve">
+    <value>CYCLE STOP</value>
+  </data>
+  <data name="String_FormMain_buttonStop" xml:space="preserve">
+    <value>STOP</value>
+  </data>
+  <data name="String_FormMain_buttonVisionStart_Run" xml:space="preserve">
+    <value>RUN</value>
+  </data>
+  <data name="String_FormMain_buttonVisionStart_Stopped" xml:space="preserve">
+    <value>STOPPED</value>
+  </data>
+  <data name="String_FormMain_buttonVisionStart_TF_Run" xml:space="preserve">
+    <value>TF RUN</value>
+  </data>
+  <data name="String_FormMain_Cart_Reel_Type_13_Inch" xml:space="preserve">
+    <value>REEL 13"</value>
+  </data>
+  <data name="String_FormMain_Cart_Reel_Type_7_Inch" xml:space="preserve">
+    <value>REEL 7"</value>
+  </data>
+  <data name="String_FormMain_Communication_State_Accepted" xml:space="preserve">
+    <value>ACCEPTED</value>
+  </data>
+  <data name="String_FormMain_Communication_State_Connected" xml:space="preserve">
+    <value>CONNECTED</value>
+  </data>
+  <data name="String_FormMain_Communication_State_Connecting" xml:space="preserve">
+    <value>CONNECTING</value>
+  </data>
+  <data name="String_FormMain_Communication_State_Disconnected" xml:space="preserve">
+    <value>DISCONNECTED</value>
+  </data>
+  <data name="String_FormMain_Communication_State_Listen" xml:space="preserve">
+    <value>LISTEN</value>
+  </data>
+  <data name="String_FormMain_Communication_State_Socket_Error" xml:space="preserve">
+    <value>SOCK ERROR</value>
+  </data>
+  <data name="String_FormMain_Compare_Operator_EqualTo" xml:space="preserve">
+    <value>Equal to (==)</value>
+  </data>
+  <data name="String_FormMain_Compare_Operator_GreaterThan" xml:space="preserve">
+    <value>Greater than (&gt;)</value>
+  </data>
+  <data name="String_FormMain_Compare_Operator_GreaterThanOrEqualTo" xml:space="preserve">
+    <value>Greater than or equal to (&gt;=)</value>
+  </data>
+  <data name="String_FormMain_Compare_Operator_LessThan" xml:space="preserve">
+    <value>Less than (&lt;)</value>
+  </data>
+  <data name="String_FormMain_Compare_Operator_LessThanOrEqualTo" xml:space="preserve">
+    <value>Less than or equal to (&lt;=)</value>
+  </data>
+  <data name="String_FormMain_Compare_Operator_NotEqualTo" xml:space="preserve">
+    <value>Not equal to (!=)</value>
+  </data>
+  <data name="String_FormMain_Exit_Condition_WaitForProperStop" xml:space="preserve">
+    <value>Please, wait for proper stop condition.</value>
+  </data>
+  <data name="String_FormMain_Information_Completed_CycleStop" xml:space="preserve">
+    <value>Completed cycle stop.</value>
+  </data>
+  <data name="String_FormMain_Information_Reset_CycleStop" xml:space="preserve">
+    <value>Reset cycle stop by operator.</value>
+  </data>
+  <data name="String_FormMain_Information_Set_CycleStop" xml:space="preserve">
+    <value>Set cycle stop by operator.</value>
+  </data>
+  <data name="String_FormMain_Information_Wait_Mrbt_Load" xml:space="preserve">
+    <value>Please, wait while finish to load a cart by MRBT.</value>
+  </data>
+  <data name="String_FormMain_Information_Wait_Mrbt_Unload" xml:space="preserve">
+    <value>Please, wait while finish to unload a cart by MRBT.</value>
+  </data>
+  <data name="String_FormMain_labelLoginOperator" xml:space="preserve">
+    <value>ENTER USER ID</value>
+  </data>
+  <data name="String_FormMain_labelMobileRobotCommunication" xml:space="preserve">
+    <value>MRBT COM.</value>
+  </data>
+  <data name="String_FormMain_labelReelTowerCommunicationState" xml:space="preserve">
+    <value>REEL TWR COM.</value>
+  </data>
+  <data name="String_FormMain_labelRobotCommunicationState" xml:space="preserve">
+    <value>ROBOT COM.</value>
+  </data>
+  <data name="String_FormMain_Message_AddedANewAccount" xml:space="preserve">
+    <value>Added a new account ({0}).</value>
+  </data>
+  <data name="String_FormMain_Message_CheckReelTowerToUnload" xml:space="preserve">
+    <value>Please, check reel tower to unload.</value>
+  </data>
+  <data name="String_FormMain_Message_ChoseProperAssignMaterialCount" xml:space="preserve">
+    <value>Please, choose proper assign reel count.</value>
+  </data>
+  <data name="String_FormMain_Message_ManagerAccountIsNotAvailable" xml:space="preserve">
+    <value>The manager account ({0}) is not available.</value>
+  </data>
+  <data name="String_FormMain_Message_ReelIsNotAvailable" xml:space="preserve">
+    <value>The reel ({0}) is not available.</value>
+  </data>
+  <data name="String_FormMain_Message_RemoveFailedTheProvideJob" xml:space="preserve">
+    <value>Please, remove failed the privde job ({0}).</value>
+  </data>
+  <data name="String_FormMain_Message_RemoveTheAccount" xml:space="preserve">
+    <value>Remove the account ({0}).</value>
+  </data>
+  <data name="String_FormMain_Message_SelectProperOutput" xml:space="preserve">
+    <value>Please, select proper outport.</value>
+  </data>
+  <data name="String_FormMain_Message_UserAccountIsNotAvailable" xml:space="preserve">
+    <value>The user account ({0}) is not available.</value>
+  </data>
+  <data name="String_FormMain_Notification_Check_Vision_Run" xml:space="preserve">
+    <value>Please, check vision process running.</value>
+  </data>
+  <data name="String_FormMain_Notification_Dock_Cart" xml:space="preserve">
+    <value>Please, dock a cart into work zone.</value>
+  </data>
+  <data name="String_FormMain_Notification_Load_Config_Failure" xml:space="preserve">
+    <value>Failed to load configuration or model information from file!{0}Please, check the config file exist or version.</value>
+  </data>
+  <data name="String_FormMain_Notification_Stop_To_Undock_Confirm" xml:space="preserve">
+    <value>Please, stop first to undock the cart.</value>
+  </data>
+  <data name="String_FormMain_Notification_Undock_Cart" xml:space="preserve">
+    <value>Please, undock the cart from work zone.</value>
+  </data>
+  <data name="String_FormMain_Notification_Undock_Confirm" xml:space="preserve">
+    <value>Would you like to undock the cart?</value>
+  </data>
+  <data name="String_FormMain_Notification_Vision_Process_Launch_Failure" xml:space="preserve">
+    <value>The other vision process is running. Please, check vision process and restart.</value>
+  </data>
+  <data name="String_FormMain_Notification_Vision_Program_Exists" xml:space="preserve">
+    <value>Vision process is not available.</value>
+  </data>
+  <data name="String_FormMain_Notification_WaitFor_Reply" xml:space="preserve">
+    <value>Wait for reply reel unload move message...</value>
+  </data>
+  <data name="String_FormMain_Question_DuplicatedMaterialInformation" xml:space="preserve">
+    <value>Would you like to remove the reels which are alredy assigned to unload then continue ?</value>
+  </data>
+  <data name="String_FormMain_Question_Exit_Program" xml:space="preserve">
+    <value>Would you like to exit the program ?</value>
+  </data>
+  <data name="String_FormMain_Question_ImportJob" xml:space="preserve">
+    <value>Detect the old reserved jobs.{0}Do you want to import it?</value>
+  </data>
+  <data name="String_FormMain_Question_ProvidJob_IsNot_Completed" xml:space="preserve">
+    <value>Provide job is not completed.{0}Do you want to pause the jobs ?</value>
+  </data>
+  <data name="String_FormMain_Question_StoreOperation_IsNot_Completed" xml:space="preserve">
+    <value>Store operation is not completed.{0}Do you want to stop immediately ?</value>
+  </data>
+  <data name="String_FormMain_radioButtonJobMonitor" xml:space="preserve">
+    <value>MONITOR</value>
+  </data>
+  <data name="String_FormMain_radioButtonLoginOperator" xml:space="preserve">
+    <value>OPERATOR</value>
+  </data>
+  <data name="String_FormMain_radioButtonSearchReel" xml:space="preserve">
+    <value>SEARCH</value>
+  </data>
+  <data name="String_FormMain_Return_Reel_Type_13_Inch" xml:space="preserve">
+    <value>RETURN 13"</value>
+  </data>
+  <data name="String_FormMain_Return_Reel_Type_7_Inch" xml:space="preserve">
+    <value>RETURN 7"</value>
+  </data>
+  <data name="String_FormMain_Robot_Action_State_Completed_Load" xml:space="preserve">
+    <value>COMP LD</value>
+  </data>
+  <data name="String_FormMain_Robot_Action_State_Completed_Unload" xml:space="preserve">
+    <value>COMP ULD</value>
+  </data>
+  <data name="String_FormMain_Robot_Action_State_Do_Load" xml:space="preserve">
+    <value>LOAD</value>
+  </data>
+  <data name="String_FormMain_Robot_Action_State_Do_Loading" xml:space="preserve">
+    <value>DO LD</value>
+  </data>
+  <data name="String_FormMain_Robot_Action_State_Do_Unload" xml:space="preserve">
+    <value>UNLOAD</value>
+  </data>
+  <data name="String_FormMain_Robot_Action_State_Do_Unloading" xml:space="preserve">
+    <value>DO ULD</value>
+  </data>
+  <data name="String_FormMain_Robot_Action_State_Failed" xml:space="preserve">
+    <value>FAILED</value>
+  </data>
+  <data name="String_FormMain_Robot_Action_State_Stopped" xml:space="preserve">
+    <value>READY</value>
+  </data>
+  <data name="String_FormMain_tabPageAccount" xml:space="preserve">
+    <value> ACCOUNT </value>
+  </data>
+  <data name="String_FormMain_tabPageAlarmHistory" xml:space="preserve">
+    <value>  ALARM HISTORY  </value>
+  </data>
+  <data name="String_FormMain_tabPageConfig" xml:space="preserve">
+    <value>    CONFIG    </value>
+  </data>
+  <data name="String_FormMain_tabPageLog" xml:space="preserve">
+    <value>     LOG    </value>
+  </data>
+  <data name="String_FormMain_tabPageMaintenance" xml:space="preserve">
+    <value>MAINTENANCE </value>
+  </data>
+  <data name="String_FormMain_tabPageOperation" xml:space="preserve">
+    <value> OPERATION </value>
+  </data>
+  <data name="String_FormMain_tabPageProvideJobLog" xml:space="preserve">
+    <value>  PROVIDE JOB </value>
+  </data>
+  <data name="String_FormMain_tabPageProvideOperation" xml:space="preserve">
+    <value> PROVIDE </value>
+  </data>
+  <data name="String_FormMain_tabPageReelTowerLog" xml:space="preserve">
+    <value>  REEL TOWER  </value>
+  </data>
+  <data name="String_FormMain_tabPageReelTowerManager" xml:space="preserve">
+    <value> MANAGER </value>
+  </data>
+  <data name="String_FormMain_tabPageReelTowerNotifier" xml:space="preserve">
+    <value>  NOTIFIER  </value>
+  </data>
+  <data name="String_FormMain_tabPageRobotLog" xml:space="preserve">
+    <value>    ROBOT    </value>
+  </data>
+  <data name="String_FormMain_tabPageStoreOperation" xml:space="preserve">
+    <value>   STORE   </value>
+  </data>
+  <data name="String_FormMain_tabPageVision" xml:space="preserve">
+    <value>    VISION    </value>
+  </data>
+  <data name="String_FormQuedList_Notification_Cleared_Remained_Unload_Requests" xml:space="preserve">
+    <value>Cleared remained unload requests in queue.</value>
+  </data>
+  <data name="String_FormQuedList_Notification_No_Picking_List" xml:space="preserve">
+    <value>Picking list is not available.</value>
+  </data>
+  <data name="String_FormQuedList_Notification_Stop_To_Show_Confirm" xml:space="preserve">
+    <value>Please, stop process first.</value>
+  </data>
+  <data name="String_Generic_DateTime_Format" xml:space="preserve">
+    <value>yyyy-MM-dd HH:mm:ss.fff</value>
+  </data>
+  <data name="String_Information_Check_System_Running_Environment" xml:space="preserve">
+    <value>Please, check system running environment.</value>
+  </data>
+  <data name="String_Information_FailedToCreateLoadRequest" xml:space="preserve">
+    <value>Failed to create load request for ({0}).</value>
+  </data>
+  <data name="String_Information_Initialization_First" xml:space="preserve">
+    <value>Please, initialize the system first.</value>
+  </data>
+  <data name="String_Information_LoadReelOnReelTowerTerminal" xml:space="preserve">
+    <value>Please, load reel ({0}) on reel tower terminal</value>
+  </data>
+  <data name="String_Information_SelectProperMaterialInformation" xml:space="preserve">
+    <value>Please, select proper material type information</value>
+  </data>
+  <data name="String_Information_Stop_Process_First" xml:space="preserve">
+    <value>Please, stop process first.</value>
+  </data>
+  <data name="String_Information_TakeOutProvidedReel" xml:space="preserve">
+    <value>Please, take out the provided reel ({0}) on tower ({1}).</value>
+  </data>
+  <data name="String_Initializing" xml:space="preserve">
+    <value>INITIALIZING...</value>
+  </data>
+  <data name="String_Label_User" xml:space="preserve">
+    <value>USER</value>
+  </data>
+  <data name="String_Login" xml:space="preserve">
+    <value>LOGIN</value>
+  </data>
+  <data name="String_Logout" xml:space="preserve">
+    <value>LOGOUT</value>
+  </data>
+  <data name="String_ManualMode" xml:space="preserve">
+    <value>MANUAL MODE</value>
+  </data>
+  <data name="String_Mrbt_Auto_Mode" xml:space="preserve">
+    <value>MRBT AUTO</value>
+  </data>
+  <data name="String_Mrbt_Manual_Mode" xml:space="preserve">
+    <value>MRBT MANUAL</value>
+  </data>
+  <data name="String_Notificatiion_Empty_Slot" xml:space="preserve">
+    <value>The work slot is empty. Change work slot.</value>
+  </data>
+  <data name="String_Notification" xml:space="preserve">
+    <value>NOTIFICATION</value>
+  </data>
+  <data name="String_Notification_CheckReelStorageProgramStatus" xml:space="preserve">
+    <value>Please, check reel storage program status with license then restart the program.</value>
+  </data>
+  <data name="String_Notification_Check_Robot_State" xml:space="preserve">
+    <value>Please, check robot state.</value>
+  </data>
+  <data name="String_Notification_Check_Vision_Program_Path" xml:space="preserve">
+    <value>Please, check vision program path.</value>
+  </data>
+  <data name="String_Notification_Check_Vision_State_Stop_Live" xml:space="preserve">
+    <value>Please, check vision state. Must be stopped to live.</value>
+  </data>
+  <data name="String_Notification_Completed_Load_Reel_From_Cart" xml:space="preserve">
+    <value>Finished load reel from cart.</value>
+  </data>
+  <data name="String_Notification_Failed_To_Load_Return" xml:space="preserve">
+    <value>Failed to load a return reel.{0}It will be retried later by automatically.</value>
+  </data>
+  <data name="String_Notification_Gripper_State" xml:space="preserve">
+    <value>Please check the gripper and reel detect sensor. No reel in gripper</value>
+  </data>
+  <data name="String_Notification_Refused_Load" xml:space="preserve">
+    <value>Refused load a reel process by tower.</value>
+  </data>
+  <data name="String_Notification_Required_Cart" xml:space="preserve">
+    <value>Please, load a production cart.</value>
+  </data>
+  <data name="String_Notification_Required_Unload_Cart" xml:space="preserve">
+    <value>Please, unload the completed production cart.</value>
+  </data>
+  <data name="String_Notification_RescanTheQrCodeOnReel" xml:space="preserve">
+    <value>Please, rescan the qr code on reel.</value>
+  </data>
+  <data name="String_Notification_Return_Stage_Empty" xml:space="preserve">
+    <value>The return stage is empty.</value>
+  </data>
+  <data name="String_Notification_Robot_Program_State" xml:space="preserve">
+    <value>Robot program state is not playing. Please, check safety sensors.</value>
+  </data>
+  <data name="String_Ok" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="String_Process_Dock" xml:space="preserve">
+    <value>DOCK</value>
+  </data>
+  <data name="String_Process_Done" xml:space="preserve">
+    <value>DONE</value>
+  </data>
+  <data name="String_Process_Idle" xml:space="preserve">
+    <value>IDLE</value>
+  </data>
+  <data name="String_Process_Load" xml:space="preserve">
+    <value>DO LD</value>
+  </data>
+  <data name="String_Process_Ready" xml:space="preserve">
+    <value>READY</value>
+  </data>
+  <data name="String_Process_State_Loading" xml:space="preserve">
+    <value>LOADING</value>
+  </data>
+  <data name="String_Process_State_Unloading" xml:space="preserve">
+    <value>UNLOADING</value>
+  </data>
+  <data name="String_Process_Undock" xml:space="preserve">
+    <value>UNDOCK</value>
+  </data>
+  <data name="String_Process_Unload" xml:space="preserve">
+    <value>DO ULD</value>
+  </data>
+  <data name="String_Query" xml:space="preserve">
+    <value>QUERY</value>
+  </data>
+  <data name="String_Question_ClearMonitorStageContext" xml:space="preserve">
+    <value>Would you like to reset the context of {0} stage ?</value>
+  </data>
+  <data name="String_Question_NotRecognizedQrCodeRetry" xml:space="preserve">
+    <value>Decoded qr code is not recognized. Please, rescan the qr on reel.{0}({1})</value>
+  </data>
+  <data name="String_Reel_Barcode_Is_Not_Unique" xml:space="preserve">
+    <value>The barcode of reel is not unique. Please, check the barcode.</value>
+  </data>
+  <data name="String_Reel_Detected" xml:space="preserve">
+    <value>DETECTED</value>
+  </data>
+  <data name="String_Refresh" xml:space="preserve">
+    <value>REFRESH</value>
+  </data>
+  <data name="String_Remove" xml:space="preserve">
+    <value>REMOVE</value>
+  </data>
+  <data name="String_Request" xml:space="preserve">
+    <value>REQUEST</value>
+  </data>
+  <data name="String_Search" xml:space="preserve">
+    <value>SEARCH</value>
+  </data>
+  <data name="String_Stop" xml:space="preserve">
+    <value>STOP</value>
+  </data>
+  <data name="String_Warning_Reject_Message_LoadMaterialOperationTimeout" xml:space="preserve">
+    <value>Load material operation timeout ({0}).</value>
+  </data>
+  <data name="String_Warning_Reject_Message_MaterialInformationNotExist" xml:space="preserve">
+    <value>Material information is not available.</value>
+  </data>
+  <data name="String_Warning_Reject_Message_WrongMaterialInformation" xml:space="preserve">
+    <value>Wrong tower state and material information is not available.</value>
+  </data>
+  <data name="String_Warning_Release_CartInWorkArea" xml:space="preserve">
+    <value>Please, release the cart in work area.</value>
+  </data>
+  <data name="String_Warning_Reset_Alarm" xml:space="preserve">
+    <value>Please, reset alarm state.</value>
+  </data>
+  <data name="String_Warning_Reset_Cycle_Stop" xml:space="preserve">
+    <value>Please, reset cycle stop state flag.</value>
+  </data>
+  <data name="transfer_black" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\transfer_black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="transfer_blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\transfer_blue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="transfer_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\transfer_green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="transfer_red" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\transfer_red.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="transfer_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\transfer_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="transfer_yellow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\transfer_yellow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+</root>

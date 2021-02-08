@@ -1,0 +1,295 @@
+﻿		// private Gui.ControlDigitalIo controlDigitalIo1;
+        // private Gui.ControlStatusLabel controlStatusLabelCompleteUnload;
+        // private Gui.ControlStatusLabel controlStatusLabelPutUnloadReelToOutput;
+        // private Gui.ControlStatusLabel controlStatusLabelTakeReelFromTower;
+        // private Gui.ControlStatusLabel controlStatusLabelMoveToTower;
+        // private Gui.ControlStatusLabel controlStatusLabelPickList;
+        // private Gui.ControlStatusLabel controlStatusLabelCartInOut;
+        // private Gui.ControlStatusLabel controlStatusLabelMrbtDocking;
+        // private Gui.ControlStatusLabel controlStatusLabelMrbtMove;
+        // private Gui.ControlStatusLabel controlStatusLabelCompleteLoad;
+        // private Gui.ControlStatusLabel controlStatusLabelPutReel;
+        // private Gui.ControlStatusLabel controlStatusLabelPickup;
+        // private Gui.ControlStatusLabel controlStatusLabelDecodeQrBarcode;
+        // private Gui.ControlStatusLabel controlStatusLabelVisionAlign;
+        // private Gui.ControlStatusLabel controlStatusLabelCartInchCheck;
+        // this.controlStatusLabelCompleteUnload = new Marcus.Solution.TechFloor.Gui.ControlStatusLabel();
+        // this.controlStatusLabelPutUnloadReelToOutput = new Marcus.Solution.TechFloor.Gui.ControlStatusLabel();
+        // this.controlStatusLabelTakeReelFromTower = new Marcus.Solution.TechFloor.Gui.ControlStatusLabel();
+        // this.controlStatusLabelMoveToTower = new Marcus.Solution.TechFloor.Gui.ControlStatusLabel();
+        // this.controlStatusLabelPickList = new Marcus.Solution.TechFloor.Gui.ControlStatusLabel();
+        // this.controlStatusLabelCartInOut = new Marcus.Solution.TechFloor.Gui.ControlStatusLabel();
+        // this.controlStatusLabelMrbtDocking = new Marcus.Solution.TechFloor.Gui.ControlStatusLabel();
+        // this.controlStatusLabelMrbtMove = new Marcus.Solution.TechFloor.Gui.ControlStatusLabel();
+        // this.controlStatusLabelCompleteLoad = new Marcus.Solution.TechFloor.Gui.ControlStatusLabel();
+        // this.controlStatusLabelPutReel = new Marcus.Solution.TechFloor.Gui.ControlStatusLabel();
+        // this.controlStatusLabelPickup = new Marcus.Solution.TechFloor.Gui.ControlStatusLabel();
+        // this.controlStatusLabelDecodeQrBarcode = new Marcus.Solution.TechFloor.Gui.ControlStatusLabel();
+        // this.controlStatusLabelVisionAlign = new Marcus.Solution.TechFloor.Gui.ControlStatusLabel();
+        // this.controlStatusLabelCartInchCheck = new Marcus.Solution.TechFloor.Gui.ControlStatusLabel();
+        //
+        //// groupBoxAnimation
+        //// 
+        //this.groupBoxAnimation.Location = new System.Drawing.Point(6, 376);
+        //this.groupBoxAnimation.Name = "groupBoxAnimation";
+        //this.groupBoxAnimation.Size = new System.Drawing.Size(742, 560);
+        //this.groupBoxAnimation.TabIndex = 252;
+        //this.groupBoxAnimation.TabStop = false;
+        //this.groupBoxAnimation.Text = " ROBOT DISPLAY ";
+        //// 
+        //// groupBoxUnloadReel
+        //// 
+        //this.groupBoxUnloadReel.Controls.Add(this.controlStatusLabelCompleteUnload);
+        //this.groupBoxUnloadReel.Controls.Add(this.controlStatusLabelPutUnloadReelToOutput);
+        //this.groupBoxUnloadReel.Controls.Add(this.controlStatusLabelTakeReelFromTower);
+        //this.groupBoxUnloadReel.Controls.Add(this.controlStatusLabelMoveToTower);
+        //this.groupBoxUnloadReel.Controls.Add(this.controlStatusLabelPickList);
+        //this.groupBoxUnloadReel.Location = new System.Drawing.Point(6, 250);
+        //this.groupBoxUnloadReel.Name = "groupBoxUnloadReel";
+        //this.groupBoxUnloadReel.Size = new System.Drawing.Size(742, 120);
+        //this.groupBoxUnloadReel.TabIndex = 251;
+        //this.groupBoxUnloadReel.TabStop = false;
+        //this.groupBoxUnloadReel.Text = " UNLOAD REEL ";
+        //// 
+        //// controlStatusLabelCompleteUnload
+        //// 
+        //this.controlStatusLabelCompleteUnload.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+        //this.controlStatusLabelCompleteUnload.Location = new System.Drawing.Point(493, 28);
+        //this.controlStatusLabelCompleteUnload.Margin = new System.Windows.Forms.Padding(0);
+        //this.controlStatusLabelCompleteUnload.Name = "controlStatusLabelCompleteUnload";
+        //this.controlStatusLabelCompleteUnload.Size = new System.Drawing.Size(120, 80);
+        //this.controlStatusLabelCompleteUnload.StatusFont = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+        //this.controlStatusLabelCompleteUnload.StatusText = "COMPLETE UNLOAD";
+        //this.controlStatusLabelCompleteUnload.TabIndex = 232;
+        //this.controlStatusLabelCompleteUnload.ValueFont = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+        //this.controlStatusLabelCompleteUnload.ValueText = "-";
+        //// 
+        //// controlStatusLabelPutUnloadReelToOutput
+        //// 
+        //this.controlStatusLabelPutUnloadReelToOutput.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+        //this.controlStatusLabelPutUnloadReelToOutput.Location = new System.Drawing.Point(373, 28);
+        //this.controlStatusLabelPutUnloadReelToOutput.Margin = new System.Windows.Forms.Padding(0);
+        //this.controlStatusLabelPutUnloadReelToOutput.Name = "controlStatusLabelPutUnloadReelToOutput";
+        //this.controlStatusLabelPutUnloadReelToOutput.Size = new System.Drawing.Size(120, 80);
+        //this.controlStatusLabelPutUnloadReelToOutput.StatusFont = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+        //this.controlStatusLabelPutUnloadReelToOutput.StatusText = "PUT TO OUTPUT";
+        //this.controlStatusLabelPutUnloadReelToOutput.TabIndex = 231;
+        //this.controlStatusLabelPutUnloadReelToOutput.ValueFont = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+        //this.controlStatusLabelPutUnloadReelToOutput.ValueText = "-";
+        //// 
+        //// controlStatusLabelTakeReelFromTower
+        //// 
+        //this.controlStatusLabelTakeReelFromTower.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+        //this.controlStatusLabelTakeReelFromTower.Location = new System.Drawing.Point(253, 28);
+        //this.controlStatusLabelTakeReelFromTower.Margin = new System.Windows.Forms.Padding(0);
+        //this.controlStatusLabelTakeReelFromTower.Name = "controlStatusLabelTakeReelFromTower";
+        //this.controlStatusLabelTakeReelFromTower.Size = new System.Drawing.Size(120, 80);
+        //this.controlStatusLabelTakeReelFromTower.StatusFont = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+        //this.controlStatusLabelTakeReelFromTower.StatusText = "TAKE REEL";
+        //this.controlStatusLabelTakeReelFromTower.TabIndex = 230;
+        //this.controlStatusLabelTakeReelFromTower.ValueFont = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+        //this.controlStatusLabelTakeReelFromTower.ValueText = "-";
+        //// 
+        //// controlStatusLabelMoveToTower
+        //// 
+        //this.controlStatusLabelMoveToTower.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+        //this.controlStatusLabelMoveToTower.Location = new System.Drawing.Point(133, 28);
+        //this.controlStatusLabelMoveToTower.Margin = new System.Windows.Forms.Padding(0);
+        //this.controlStatusLabelMoveToTower.Name = "controlStatusLabelMoveToTower";
+        //this.controlStatusLabelMoveToTower.Size = new System.Drawing.Size(120, 80);
+        //this.controlStatusLabelMoveToTower.StatusFont = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+        //this.controlStatusLabelMoveToTower.StatusText = "MOVE TO TOWER";
+        //this.controlStatusLabelMoveToTower.TabIndex = 229;
+        //this.controlStatusLabelMoveToTower.ValueFont = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+        //this.controlStatusLabelMoveToTower.ValueText = "-";
+        //// 
+        //// controlStatusLabelPickList
+        //// 
+        //this.controlStatusLabelPickList.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+        //this.controlStatusLabelPickList.Location = new System.Drawing.Point(13, 28);
+        //this.controlStatusLabelPickList.Margin = new System.Windows.Forms.Padding(0);
+        //this.controlStatusLabelPickList.Name = "controlStatusLabelPickList";
+        //this.controlStatusLabelPickList.Size = new System.Drawing.Size(120, 80);
+        //this.controlStatusLabelPickList.StatusFont = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+        //this.controlStatusLabelPickList.StatusText = "PICK LIST";
+        //this.controlStatusLabelPickList.TabIndex = 228;
+        //this.controlStatusLabelPickList.ValueFont = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+        //this.controlStatusLabelPickList.ValueText = "-";
+        //// 
+        //// groupBoxCartInOut
+        //// 
+        //this.groupBoxCartInOut.Controls.Add(this.controlStatusLabelCartInOut);
+        //this.groupBoxCartInOut.Controls.Add(this.controlStatusLabelMrbtDocking);
+        //this.groupBoxCartInOut.Controls.Add(this.controlStatusLabelMrbtMove);
+        //this.groupBoxCartInOut.Controls.Add(this.buttonDock);
+        //this.groupBoxCartInOut.Controls.Add(this.buttonMobileRobotControllerUsage);
+        //this.groupBoxCartInOut.Location = new System.Drawing.Point(6, 8);
+        //this.groupBoxCartInOut.Name = "groupBoxCartInOut";
+        //this.groupBoxCartInOut.Size = new System.Drawing.Size(742, 120);
+        //this.groupBoxCartInOut.TabIndex = 250;
+        //this.groupBoxCartInOut.TabStop = false;
+        //this.groupBoxCartInOut.Text = "CART IN / OUT [ REEL SIZE: X ]";
+        //// 
+        //// controlStatusLabelCartInOut
+        //// 
+        //this.controlStatusLabelCartInOut.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+        //this.controlStatusLabelCartInOut.Location = new System.Drawing.Point(253, 28);
+        //this.controlStatusLabelCartInOut.Margin = new System.Windows.Forms.Padding(0);
+        //this.controlStatusLabelCartInOut.Name = "controlStatusLabelCartInOut";
+        //this.controlStatusLabelCartInOut.Size = new System.Drawing.Size(120, 80);
+        //this.controlStatusLabelCartInOut.StatusFont = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+        //this.controlStatusLabelCartInOut.StatusText = "CART IN-OUT";
+        //this.controlStatusLabelCartInOut.TabIndex = 227;
+        //this.controlStatusLabelCartInOut.ValueFont = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+        //this.controlStatusLabelCartInOut.ValueText = "-";
+        //// 
+        //// controlStatusLabelMrbtDocking
+        //// 
+        //this.controlStatusLabelMrbtDocking.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+        //this.controlStatusLabelMrbtDocking.Location = new System.Drawing.Point(133, 28);
+        //this.controlStatusLabelMrbtDocking.Margin = new System.Windows.Forms.Padding(0);
+        //this.controlStatusLabelMrbtDocking.Name = "controlStatusLabelMrbtDocking";
+        //this.controlStatusLabelMrbtDocking.Size = new System.Drawing.Size(120, 80);
+        //this.controlStatusLabelMrbtDocking.StatusFont = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+        //this.controlStatusLabelMrbtDocking.StatusText = "DOCKING";
+        //this.controlStatusLabelMrbtDocking.TabIndex = 226;
+        //this.controlStatusLabelMrbtDocking.ValueFont = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+        //this.controlStatusLabelMrbtDocking.ValueText = "-";
+        //// 
+        //// controlStatusLabelMrbtMove
+        //// 
+        //this.controlStatusLabelMrbtMove.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+        //this.controlStatusLabelMrbtMove.Location = new System.Drawing.Point(13, 28);
+        //this.controlStatusLabelMrbtMove.Margin = new System.Windows.Forms.Padding(0);
+        //this.controlStatusLabelMrbtMove.Name = "controlStatusLabelMrbtMove";
+        //this.controlStatusLabelMrbtMove.Size = new System.Drawing.Size(120, 80);
+        //this.controlStatusLabelMrbtMove.StatusFont = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+        //this.controlStatusLabelMrbtMove.StatusText = "MOVE MRBT";
+        //this.controlStatusLabelMrbtMove.TabIndex = 225;
+        //this.controlStatusLabelMrbtMove.ValueFont = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+        //this.controlStatusLabelMrbtMove.ValueText = "-";
+        //// 
+        //// buttonDock
+        //// 
+        //this.buttonDock.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+        //this.buttonDock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+        //this.buttonDock.ForeColor = System.Drawing.SystemColors.Window;
+        //this.buttonDock.Location = new System.Drawing.Point(499, 48);
+        //this.buttonDock.Name = "buttonDock";
+        //this.buttonDock.Size = new System.Drawing.Size(240, 40);
+        //this.buttonDock.TabIndex = 224;
+        //this.buttonDock.Text = "DOCK";
+        //this.buttonDock.UseVisualStyleBackColor = false;
+        //this.buttonDock.Visible = false;
+        //this.buttonDock.Click += new System.EventHandler(this.OnClickButtonDock);
+        //// 
+        //// buttonMobileRobotControllerUsage
+        //// 
+        //this.buttonMobileRobotControllerUsage.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+        //this.buttonMobileRobotControllerUsage.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDark;
+        //this.buttonMobileRobotControllerUsage.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ControlDarkDark;
+        //this.buttonMobileRobotControllerUsage.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight;
+        //this.buttonMobileRobotControllerUsage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+        //this.buttonMobileRobotControllerUsage.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+        //this.buttonMobileRobotControllerUsage.ForeColor = System.Drawing.SystemColors.Window;
+        //this.buttonMobileRobotControllerUsage.Location = new System.Drawing.Point(499, 2);
+        //this.buttonMobileRobotControllerUsage.Margin = new System.Windows.Forms.Padding(0);
+        //this.buttonMobileRobotControllerUsage.Name = "buttonMobileRobotControllerUsage";
+        //this.buttonMobileRobotControllerUsage.Size = new System.Drawing.Size(240, 40);
+        //this.buttonMobileRobotControllerUsage.TabIndex = 220;
+        //this.buttonMobileRobotControllerUsage.Text = "MRBT AUTO";
+        //this.buttonMobileRobotControllerUsage.UseVisualStyleBackColor = false;
+        //this.buttonMobileRobotControllerUsage.Click += new System.EventHandler(this.OnClickButtonMRBTMove);
+        //// 
+        //// groupBoxLoadReel
+        //// 
+        //this.groupBoxLoadReel.Controls.Add(this.controlStatusLabelCompleteLoad);
+        //this.groupBoxLoadReel.Controls.Add(this.controlStatusLabelPutReel);
+        //this.groupBoxLoadReel.Controls.Add(this.controlStatusLabelPickup);
+        //this.groupBoxLoadReel.Controls.Add(this.controlStatusLabelDecodeQrBarcode);
+        //this.groupBoxLoadReel.Controls.Add(this.controlStatusLabelVisionAlign);
+        //this.groupBoxLoadReel.Controls.Add(this.controlStatusLabelCartInchCheck);
+        //this.groupBoxLoadReel.Location = new System.Drawing.Point(6, 129);
+        //this.groupBoxLoadReel.Name = "groupBoxLoadReel";
+        //this.groupBoxLoadReel.Size = new System.Drawing.Size(742, 120);
+        //this.groupBoxLoadReel.TabIndex = 249;
+        //this.groupBoxLoadReel.TabStop = false;
+        //this.groupBoxLoadReel.Text = " LOAD REEL ";
+        //// 
+        //// controlStatusLabelCompleteLoad
+        //// 
+        //this.controlStatusLabelCompleteLoad.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+        //this.controlStatusLabelCompleteLoad.Location = new System.Drawing.Point(613, 28);
+        //this.controlStatusLabelCompleteLoad.Margin = new System.Windows.Forms.Padding(0);
+        //this.controlStatusLabelCompleteLoad.Name = "controlStatusLabelCompleteLoad";
+        //this.controlStatusLabelCompleteLoad.Size = new System.Drawing.Size(120, 80);
+        //this.controlStatusLabelCompleteLoad.StatusFont = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+        //this.controlStatusLabelCompleteLoad.StatusText = "COMPLETE LOAD";
+        //this.controlStatusLabelCompleteLoad.TabIndex = 233;
+        //this.controlStatusLabelCompleteLoad.ValueFont = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+        //this.controlStatusLabelCompleteLoad.ValueText = "-";
+        //// 
+        //// controlStatusLabelPutReel
+        //// 
+        //this.controlStatusLabelPutReel.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+        //this.controlStatusLabelPutReel.Location = new System.Drawing.Point(493, 28);
+        //this.controlStatusLabelPutReel.Margin = new System.Windows.Forms.Padding(0);
+        //this.controlStatusLabelPutReel.Name = "controlStatusLabelPutReel";
+        //this.controlStatusLabelPutReel.Size = new System.Drawing.Size(120, 80);
+        //this.controlStatusLabelPutReel.StatusFont = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+        //this.controlStatusLabelPutReel.StatusText = "PUT LOAD REEL";
+        //this.controlStatusLabelPutReel.TabIndex = 232;
+        //this.controlStatusLabelPutReel.ValueFont = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+        //this.controlStatusLabelPutReel.ValueText = "-";
+        //// 
+        //// controlStatusLabelPickup
+        //// 
+        //this.controlStatusLabelPickup.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+        //this.controlStatusLabelPickup.Location = new System.Drawing.Point(373, 28);
+        //this.controlStatusLabelPickup.Margin = new System.Windows.Forms.Padding(0);
+        //this.controlStatusLabelPickup.Name = "controlStatusLabelPickup";
+        //this.controlStatusLabelPickup.Size = new System.Drawing.Size(120, 80);
+        //this.controlStatusLabelPickup.StatusFont = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+        //this.controlStatusLabelPickup.StatusText = "PICK UP REEL";
+        //this.controlStatusLabelPickup.TabIndex = 231;
+        //this.controlStatusLabelPickup.ValueFont = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+        //this.controlStatusLabelPickup.ValueText = "-";
+        //// 
+        //// controlStatusLabelDecodeQrBarcode
+        //// 
+        //this.controlStatusLabelDecodeQrBarcode.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+        //this.controlStatusLabelDecodeQrBarcode.Location = new System.Drawing.Point(253, 28);
+        //this.controlStatusLabelDecodeQrBarcode.Margin = new System.Windows.Forms.Padding(0);
+        //this.controlStatusLabelDecodeQrBarcode.Name = "controlStatusLabelDecodeQrBarcode";
+        //this.controlStatusLabelDecodeQrBarcode.Size = new System.Drawing.Size(120, 80);
+        //this.controlStatusLabelDecodeQrBarcode.StatusFont = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+        //this.controlStatusLabelDecodeQrBarcode.StatusText = "VISION DECODE QR";
+        //this.controlStatusLabelDecodeQrBarcode.TabIndex = 230;
+        //this.controlStatusLabelDecodeQrBarcode.ValueFont = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+        //this.controlStatusLabelDecodeQrBarcode.ValueText = "-";
+        //// 
+        //// controlStatusLabelVisionAlign
+        //// 
+        //this.controlStatusLabelVisionAlign.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+        //this.controlStatusLabelVisionAlign.Location = new System.Drawing.Point(133, 28);
+        //this.controlStatusLabelVisionAlign.Margin = new System.Windows.Forms.Padding(0);
+        //this.controlStatusLabelVisionAlign.Name = "controlStatusLabelVisionAlign";
+        //this.controlStatusLabelVisionAlign.Size = new System.Drawing.Size(120, 80);
+        //this.controlStatusLabelVisionAlign.StatusFont = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+        //this.controlStatusLabelVisionAlign.StatusText = "VISION ALIGNMENT";
+        //this.controlStatusLabelVisionAlign.TabIndex = 229;
+        //this.controlStatusLabelVisionAlign.ValueFont = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+        //this.controlStatusLabelVisionAlign.ValueText = "-";
+        //// 
+        //// controlStatusLabelCartInchCheck
+        //// 
+        //this.controlStatusLabelCartInchCheck.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+        //this.controlStatusLabelCartInchCheck.Location = new System.Drawing.Point(13, 28);
+        //this.controlStatusLabelCartInchCheck.Margin = new System.Windows.Forms.Padding(0);
+        //this.controlStatusLabelCartInchCheck.Name = "controlStatusLabelCartInchCheck";
+        //this.controlStatusLabelCartInchCheck.Size = new System.Drawing.Size(120, 80);
+        //this.controlStatusLabelCartInchCheck.StatusFont = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+        //this.controlStatusLabelCartInchCheck.StatusText = "CHECK REEL SIZE";
+        //this.controlStatusLabelCartInchCheck.TabIndex = 228;
+        //this.controlStatusLabelCartInchCheck.ValueFont = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+        //this.controlStatusLabelCartInchCheck.ValueText = "-";

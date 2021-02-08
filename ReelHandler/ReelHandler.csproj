@@ -1,0 +1,351 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{853390C4-62A1-4A60-AF0A-96D3137BBA9A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>TechFloor</RootNamespace>
+    <AssemblyName>ReelHandler</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Prefer32Bit>false</Prefer32Bit>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+    <DocumentationFile>
+    </DocumentationFile>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>risingstar.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AMM">
+      <HintPath>..\Lib\AMM.dll</HintPath>
+    </Reference>
+    <Reference Include="Cognex.VisionPro, Version=69.3.0.0, Culture=neutral, PublicKeyToken=ef0f902af9dee505, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\x64\Debug\Cognex.VisionPro.dll</HintPath>
+    </Reference>
+    <Reference Include="Cognex.VisionPro.Core, Version=69.3.0.0, Culture=neutral, PublicKeyToken=ef0f902af9dee505, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\x64\Debug\Cognex.VisionPro.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Cognex.VisionPro.CorePlus, Version=69.3.0.0, Culture=neutral, PublicKeyToken=ef0f902af9dee505, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\x64\Debug\Cognex.VisionPro.CorePlus.dll</HintPath>
+    </Reference>
+    <Reference Include="NModbus4, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\NModbus4.2.1.0\lib\net40\NModbus4.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Forms\FormMonitorStages.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormMonitorStages.Designer.cs">
+      <DependentUpon>FormMonitorStages.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="Modules\MobileRobotManager.cs" />
+    <Compile Include="Modules\Config.cs" />
+    <Compile Include="Modules\Model.cs" />
+    <Compile Include="Extensions\References.cs" />
+    <Compile Include="Modules\MainSequence.cs" />
+    <Compile Include="Driver\Dio\Comizoa\Cmmsdk.cs" />
+    <Compile Include="Driver\Dio\Comizoa\CmmsdkDef.cs" />
+    <Compile Include="Modules\DigitalIoManager.cs" />
+    <Compile Include="Forms\FormCalibration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormCalibration.Designer.cs">
+      <DependentUpon>FormCalibration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormInitialization.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormInitialization.Designer.cs">
+      <DependentUpon>FormInitialization.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormQueuedList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormQueuedList.Designer.cs">
+      <DependentUpon>FormQueuedList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormLight.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormLight.Designer.cs">
+      <DependentUpon>FormLight.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormMessageExt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormMessageExt.Designer.cs">
+      <DependentUpon>FormMessageExt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Program.cs" />
+    <Compile Include="Forms\FormSplash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormSplash.Designer.cs">
+      <DependentUpon>FormSplash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Modules\RobotController.cs" />
+    <Compile Include="Modules\RobotSequenceManager.cs" />
+    <Compile Include="Forms\FormBarcodeInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormBarcodeInput.Designer.cs">
+      <DependentUpon>FormBarcodeInput.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Forms\FormCalibration.resx">
+      <DependentUpon>FormCalibration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormInitialization.resx">
+      <DependentUpon>FormInitialization.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormMonitorStages.resx">
+      <DependentUpon>FormMonitorStages.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormQueuedList.resx">
+      <DependentUpon>FormQueuedList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormLight.resx">
+      <DependentUpon>FormLight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormMessageExt.resx">
+      <DependentUpon>FormMessageExt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormSplash.resx">
+      <DependentUpon>FormSplash.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Forms\FormBarcodeInput.resx">
+      <DependentUpon>FormBarcodeInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.ko-KR.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controls\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robot_1.png" />
+    <None Include="Resources\robot_1_black.png" />
+    <None Include="Resources\robot_1_blue.png" />
+    <None Include="Resources\robot_1_cyan.png" />
+    <None Include="Resources\robot_1_green.png" />
+    <None Include="Resources\robot_1_lime.png" />
+    <None Include="Resources\robot_1_red.png" />
+    <None Include="Resources\robot_1_white.png" />
+    <None Include="Resources\robot_2.png" />
+    <None Include="Resources\robot_2_blue.png" />
+    <None Include="Resources\robot_2_green.png" />
+    <None Include="Resources\robot_2_red.png" />
+    <None Include="Resources\robot_2_white.png" />
+    <None Include="Resources\robot_2_yellow.png" />
+    <None Include="Resources\transfer_black.png" />
+    <None Include="Resources\transfer_blue.png" />
+    <None Include="Resources\transfer_green.png" />
+    <None Include="Resources\transfer_red.png" />
+    <None Include="Resources\transfer_white.png" />
+    <None Include="Resources\transfer_yellow.png" />
+    <None Include="Resources\ActionCenterCPL_2.ico" />
+    <None Include="Resources\ActionCenterCPL_3.ico" />
+    <None Include="Resources\ActionCenterCPL_4.ico" />
+    <None Include="Resources\nvwss_9636.ico" />
+    <None Include="Resources\nvwss_9637.ico" />
+    <None Include="Resources\nvwss_9638.ico" />
+    <None Include="Resources\robot_2_black.png" />
+    <Content Include="risingstar.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CompositeImageProcessControl\CompositeImageProcessControl.csproj">
+      <Project>{29e47515-ce28-4d06-87f4-0dc52f6ad67e}</Project>
+      <Name>CompositeImageProcessControl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Solution\Framework\Components\Components.csproj">
+      <Project>{f5abe7a6-327c-43a7-9ac5-8482e8a81c00}</Project>
+      <Name>Components</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Solution\Framework\Device\Device.csproj">
+      <Project>{7e452254-870d-4e2a-a885-653c0fb182bf}</Project>
+      <Name>Device</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Solution\Framework\Gui\Gui.csproj">
+      <Project>{a99d28fe-781b-4afd-814a-b8e50fbf9492}</Project>
+      <Name>Gui</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Solution\Framework\Object\Object.csproj">
+      <Project>{78a96fc4-9c12-4fe2-bfb6-a48ee0f7fc07}</Project>
+      <Name>Object</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Solution\Framework\Shared\Shared.csproj">
+      <Project>{6c77f5df-0f47-46f1-982b-82ae8a39ad8f}</Project>
+      <Name>Shared</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>rem mkdir D:\Amkor\K4\URL\Config
+rem mkdir D:\Amkor\K4\URL\ko-KR
+rem copy ReelHandler.* D:\Amkor\K4\URL\ReelHandler.*
+rem copy AmkorURL_Control.* D:\Amkor\K4\URL\AmkorURL_Control.*
+rem copy Marcus.Solution.* D:\Amkor\K4\URL\Marcus.Solution.*
+rem copy .\Config\Alarmlist.* D:\Amkor\K4\URL\Config\Alarmlist.*
+rem copy .\ko-KR\*.* D:\Amkor\K4\URL\ko-KR\*.*</PostBuildEvent>
+  </PropertyGroup>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>이 프로젝트는 이 컴퓨터에 없는 NuGet 패키지를 참조합니다. 해당 패키지를 다운로드하려면 NuGet 패키지 복원을 사용하십시오. 자세한 내용은 http://go.microsoft.com/fwlink/?LinkID=322105를 참조하십시오. 누락된 파일은 {0}입니다.</ErrorText>
+    </PropertyGroup>
+  </Target>
+</Project>

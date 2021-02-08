@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="a1ff8c77-8a82-4a3c-9046-795321abe045" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8585/RtTower.WebService/" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="item.wsdl" MetadataType="Wsdl" ID="ed2826a0-c3a7-481c-9180-d7fd3ae3d415" SourceId="1" SourceUrl="http://localhost:8585/RtTower.WebService/?wsdl=wsdl0" />
+    <MetadataFile FileName="item.xsd" MetadataType="Schema" ID="7e30563f-2931-4bf4-9705-c4771dfd376d" SourceId="1" SourceUrl="http://localhost:8585/RtTower.WebService/?xsd=xsd0" />
+    <MetadataFile FileName="InterfaceService.wsdl" MetadataType="Wsdl" ID="fc6dd4b8-813c-45f7-a596-14a5654e762b" SourceId="1" SourceUrl="http://localhost:8585/RtTower.WebService/?wsdl" />
+    <MetadataFile FileName="item1.xsd" MetadataType="Schema" ID="3c1b7929-4863-4613-9b15-180adc64ac66" SourceId="1" SourceUrl="http://localhost:8585/RtTower.WebService/?xsd=xsd1" />
+    <MetadataFile FileName="item.disco" MetadataType="Disco" ID="5bc6812d-92b6-410f-a244-135d06319967" SourceId="1" SourceUrl="http://localhost:8585/RtTower.WebService/?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

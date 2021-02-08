@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Config version="1.0.0.0" culture="en-US">
+	<Processes>
+		<Process name="ProcessWatcher" path="Modules\ProcessWatcher.exe" />
+	</Processes>
+</Config>

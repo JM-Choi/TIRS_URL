@@ -1,0 +1,43 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="ProcessWatcher.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Target" Type="System.Collections.Specialized.StringCollection" Scope="User">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;name=ReelHandler&lt;/string&gt;
+  &lt;string&gt;path=D:\Amkor\K4\URL\ReelTowerRobot.exe&lt;/string&gt;
+  &lt;string&gt;interval=5&lt;/string&gt;
+&lt;/ArrayOfString&gt;</Value>
+    </Setting>
+    <Setting Name="ExternalService" Type="System.Collections.Specialized.StringCollection" Scope="User">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;name=SkyNet&lt;/string&gt;
+  &lt;string&gt;address=10.131.31.102&lt;/string&gt;
+  &lt;string&gt;line=AJ54100&lt;/string&gt;
+  &lt;string&gt;process=1760&lt;/string&gt;
+  &lt;string&gt;id=URL1&lt;/string&gt;
+&lt;/ArrayOfString&gt;</Value>
+    </Setting>
+    <Setting Name="CultureCode" Type="System.String" Scope="User">
+      <Value Profile="(Default)">en-US</Value>
+    </Setting>
+    <Setting Name="AlarmList" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Config\AlarmList.xml</Value>
+    </Setting>
+    <Setting Name="LogPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Log\</Value>
+    </Setting>
+    <Setting Name="RunMode" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Simulation</Value>
+    </Setting>
+    <Setting Name="Listener" Type="System.Collections.Specialized.StringCollection" Scope="User">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;address=0.0.0.0&lt;/string&gt;
+  &lt;string&gt;port=49151&lt;/string&gt;
+&lt;/ArrayOfString&gt;</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

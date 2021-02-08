@@ -1,0 +1,1173 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Alarms>
+  <Alarm id="0" extra="EC0000" name="Normal" enabled="true" report="false" severity="Low">
+    <Description culture="en-US" file=".rtf">
+      <Message>Success</Message>
+      <Remedy>Normal</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>성공</Message>
+      <Remedy>정상</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="1" extra="EC0001" name="AbortInitialize" enabled="true" report="false" severity="Moderate">
+    <Description culture="en-US" file=".rtf">
+      <Message>Initialization was aborted.</Message>
+      <Remedy>Retry operation.</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>장비 초기화 중지 되었습니다.</Message>
+      <Remedy>장비 상태 확인과 재시도 하세요.</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="2" extra="EC0002" name="FailedInitialize" enabled="true" report="false" severity="Moderate">
+    <Description culture="en-US" file=".rtf">
+      <Message>Initialization was failed.</Message>
+      <Remedy>Check equipment state then retry.</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>장비 초기화 실패 하였습니다. 재시도 하세요.</Message>
+      <Remedy>장비 상태 확인과 재시도 하세요.</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="3" extra="EC0003" name="ReelTowerResponseTimeout" enabled="true" report="false" severity="Moderate">
+    <Description culture="en-US" file=".rtf">
+      <Message>Reel tower is not reply within timeout.</Message>
+      <Remedy>Check reel tower state and network status.</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>릴 보관함이 응답하지 않습니다. 정지 후 재운전 하거나, 담당자 도움을 요청하세요.</Message>
+      <Remedy>릴 보관함의 통신 상태를 확인하세요. 정지 후 재운전 하세요.</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="4" extra="EC0004" name="RobotCommunicationFailure" enabled="true" report="true" severity="Moderate">
+    <Description culture="en-US" file=".rtf">
+      <Message>Lost robot communication.</Message>
+      <Remedy>Check robot communication and control program status.</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>로봇 통신이 끊어졌습니다. 재시도 하세요.</Message>
+      <Remedy>로봇 통신을 확인하고, 로봇과 장비 초기화하고, 재운전 하세요.</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="5" extra="EC0005" name="RobotMoveToHomeTimeout" enabled="true" report="false" severity="Moderate">
+    <Description culture="en-US" file=".rtf">
+      <Message>Move to home position of robot is over timeout (1 min).</Message>
+      <Remedy>Check robot state then retry robot homing.</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>로봇 홈이동이 타임아웃 되었습니다. 재시도 하세요.</Message>
+      <Remedy>로봇 상태 확인하고, 로봇 초기화 재시도 하세요.</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="6" extra="EC0006" name="RobotMoveTimeout" enabled="true" report="false" severity="Moderate">
+    <Description culture="en-US" file=".rtf">
+      <Message>Move to position of robot is over timeout (30 sec).</Message>
+      <Remedy>Check robot state then robot homing.</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>로봇 이동이 타임아웃 되었습니다. 재시도 하거나, 담당자 도움을 요청하세요.</Message>
+      <Remedy>로봇 상태를 확인하고, 로봇 초기화 후 재시도 하세요.</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="7" extra="EC0007" name="FailedToStopProgram" enabled="true" report="false" severity="Moderate">
+    <Description culture="en-US" file=".rtf">
+      <Message>Robot program is not stopped by remote.</Message>
+      <Remedy>Check robot state then robot homing.</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>로봇 프로그램이 정지되지 않았습니다. 재시도 하거나, 담당자 도움을 요청하세요.</Message>
+      <Remedy>로봇 상태와 통신 상태를 확인하고, 로봇 초기화 후 재시도 하세요.</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="8" extra="EC0008" name="FailedToPauseProgram" enabled="true" report="false" severity="Moderate">
+    <Description culture="en-US" file=".rtf">
+      <Message>Robot program is not paused by remote.</Message>
+      <Remedy>Check robot state then robot homing.</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>로봇 프로그램이 일시정지 되지 않았습니다. 재시도 하거나, 담당자 도움을 요청하세요.</Message>
+      <Remedy>로봇 상태와 통신 상태를 확인하고, 로봇 초기화 후 재시도 하세요.</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="9" extra="EC0009" name="FailedToLoadProgram" enabled="true" report="false" severity="Moderate">
+    <Description culture="en-US" file=".rtf">
+      <Message>Robot program is not loaded by remote.</Message>
+      <Remedy>Check robot state then robot homing.</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>로봇 프로그램이 로딩되지 않았습니다. 재시도 하거나, 담당자 도움을 요청하세요.</Message>
+      <Remedy>로봇 상태와 통신 상태를 확인하고, 로봇 초기화 후 재시도 하세요.</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="10" extra="EC0010" name="FailedToPlayProgram" enabled="true" report="false" severity="Moderate">
+    <Description culture="en-US" file=".rtf">
+      <Message>Robot program is not played by remote.</Message>
+      <Remedy>Check robot state then robot homing.</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>로봇 프로그램이 실행되지 않았습니다. 재시도 하거나, 담당자 도움을 요청하세요.</Message>
+      <Remedy>로봇 상태와 통신 상태를 확인하고, 로봇 초기화 후 재시도 하세요.</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="11" extra="EC0011" name="CartPresentSensorFailure" enabled="true" report="true" severity="Moderate">
+    <Description culture="en-US" file=".rtf">
+      <Message>The cart present sensor is not worked or material is absent.</Message>
+      <Remedy>Check cart present sensor state.</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>카트 감지 센서가 동작하지 않거나, 카트가 재위치 하지 않았습니다. 카트 센서 상태를 확인 하세요.</Message>
+      <Remedy>카트 감지 센서를 확인 하세요.</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="12" extra="EC0012" name="ReturnReelPresentSensorFailure" enabled="true" report="true" severity="Moderate">
+    <Description culture="en-US" file=".rtf">
+      <Message>The reel is not present on return stage or sensor is not working.</Message>
+      <Remedy>Check reel present on return stage.</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>반납 릴 스테이지에 반납 릴이 없거나, 센서가 동작하지 않습니다. 릴 감지 센서 상태를 확인하세요.</Message>
+      <Remedy>반납 릴 스테이지에 릴 유무를 확인 하세요.</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="13" extra="EC0013" name="ReturnReelTypeIsNotValid" enabled="true" report="true" severity="Moderate">
+    <Description culture="en-US" file=".rtf">
+      <Message>The placed reel on return stage is not located proper sensor detection range.</Message>
+      <Remedy>Check reel position on return stage.</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>반납 릴 스테이지에 릴이 감지 센서에서 이격 거리가 큽니다. 릴 위치와 감지 센서를 재확인 하세요.</Message>
+      <Remedy>반닙 릴이 놓여 있는 위치를 확인 하세요.</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="14" extra="EC0014" name="RobotVisionFailure" enabled="true" report="true" severity="Major">
+    <Description culture="en-US" file=".rtf">
+      <Message>The vision process result is failure.</Message>
+      <Remedy>Check vision result and cause of failure. If you need adjust vision pattern, try to modify.</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>작업 영상 분석이 실패하였습니다. 재시도 하세요.</Message>
+      <Remedy>작업 영상 실패를 확인하고, 영상 패턴의 일치도가 낮거나, 조명이 잘못 된 경우, 수정 하세요.</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="15" extra="EC0015" name="RobotVisionAlignPositionFailure" enabled="true" report="true" severity="Major">
+    <Description culture="en-US" file=".rtf">
+      <Message>The adjust movement by alignment result of vision process is failed.</Message>
+      <Remedy>Check vision alignment result. Adjustment movment was failed.</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>릴 정 중앙 찾기 정보에 따라 릴 위치 조정과 집기에 실패 하였습니다. 재시도 하세요.</Message>
+      <Remedy>릴 정 중앙 찾기 결과와 작업 영상 판별 정보를 확인하고, 릴 잡기 실패 원인을 검토 하세요.</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="16" extra="EC0016" name="RobotVisionDecodeBarcodeFailure" enabled="true" report="true" severity="Major">
+    <Description culture="en-US" file=".rtf">
+      <Message>The barcode decoding is failed.</Message>
+      <Remedy>Check barcode present and reel state.</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>바코드 판독 실패하였습니다. 재시도 하거나, 수기로 입력하세요.</Message>
+      <Remedy>릴 바코드 유무와 릴 상태를 확인하고, 재시도 하세요. 높이 측정오류가 있는 경우, 릴 위치를 변경 후 재시도 하세요.</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="17" extra="EC0017" name="RobotVisionDecodedBarcodeIsNotValid" enabled="true" report="true" severity="Major">
+    <Description culture="en-US" file=".rtf">
+      <Message>The decoded barcode data is not valid.</Message>
+      <Remedy>Check barcode data of reel.</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>판독 된 바코드 정보가 유효하지 않습니다. 재시도 하세요.</Message>
+      <Remedy>판독 된 바코드 정보의 유효성을 확인하고, 실제 정보와 일치 유무를 확인후 재시도 하세요.</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="18" extra="EC0018" name="FailedToPickupReelFromCart" enabled="true" report="false" severity="Major">
+    <Description culture="en-US" file=".rtf">
+      <Message>The robot action to pickup a reel from cart is failed.</Message>
+      <Remedy>Check reel exist on workslot of cart then retry.</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>카트로 부터 릴 픽업과 로딩이 실패 하였습니다. 재시도 하세요.</Message>
+      <Remedy>릴 존재 유무와 릴 잡기 실패 원인을 확인 하세요. 릴 위치를 변경하고 재시도 하세요.</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="19" extra="EC0019" name="FailedToPickupReelFromReturn" enabled="true" report="false" severity="Major">
+    <Description culture="en-US" file=".rtf">
+      <Message>The robot action to pickup a reel from return is failed.</Message>
+      <Remedy>Check return reel state on return stage and retry.</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>반납 릴 스테이지로 부터 릴 픽업과 로딩이 실패하였습니다. 재시도 하세요.</Message>
+      <Remedy>반납 릴 스테이지에 릴 상태를 확인하고, 재시도 하세요.</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="20" extra="EC0020" name="FailedToCheckReelTypeOfCart" enabled="true" report="false" severity="Major">
+    <Description culture="en-US" file=".rtf">
+      <Message>The reel size check of cart is failed.</Message>
+      <Remedy>Check cart placement and vision pattern.</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>카트 릴 크기 확인 실패 하였습니다. 재시도 하세요.</Message>
+      <Remedy>카트의 도킹 상태와 작업 영상 패턴을 확인하고, 재시도 하세요.</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="21" extra="EC0021" name="FailedToCheckReelTypeOfReturn" enabled="true" report="false" severity="Major">
+    <Description culture="en-US" file=".rtf">
+      <Message>The reel size check for return is failed.</Message>
+      <Remedy>Check reel state then retry.</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>반납 릴 크기 확인 실패 하였습니다. 재시도 하세요.</Message>
+      <Remedy>릴 상태를 확인 하고, 재시도 하세요.</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="22" extra="EC0022" name="FailedToSetReelSizeOfCartToRobot" enabled="true" report="false" severity="Major">
+    <Description culture="en-US" file=".rtf">
+      <Message>Set the reel size of cart in robot is failed.</Message>
+      <Remedy>Check cart vision pattern then retry.</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>로봇에 카트 릴 크기 설정하지 못했습니댜. 재시도 하세요.</Message>
+      <Remedy>릴 카트 작엽 영상 패턴을 확인 하고, 재시도 하세요.</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="23" extra="EC0023" name="FailedToSetReelSizeOfReturnToRobot" enabled="true" report="false" severity="Major">
+    <Description culture="en-US" file=".rtf">
+      <Message>Set the reel size for return in robot is failed.</Message>
+      <Remedy>Check reel state on return stage then retry.</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>로봇에 반납 릴 크기 설정하지 못했습니다. 재시도 하세요.</Message>
+      <Remedy>반납 릴 상태를 확인 하고, 재시도 하세요.</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="24" extra="EC0024" name="FailedToSetWorkSlotOfCart" enabled="true" report="false" severity="Major">
+    <Description culture="en-US" file=".rtf">
+      <Message>Set work slot of cart to robot is failed.</Message>
+      <Remedy>Check robot communication state then retry.</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>로봇에 카트 작업 슬롯 번호 설정 실패하였습니다. 재시도 하세요.</Message>
+      <Remedy>로봇 통신 상태를 확인 하고, 재시도 하세요.</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="25" extra="EC0025" name="WorkSlotOfCartIsNotValid" enabled="true" report="false" severity="Major">
+    <Description culture="en-US" file=".rtf">
+      <Message>The work slot number of cart is not valid.</Message>
+      <Remedy>Check work slot number then retry.</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>카트 작업 슬롯 번호가 유효하지 않습니다.</Message>
+      <Remedy>카트 작업 슬롯 번호 확인 하고, 재시도 하세요.</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="26" extra="EC0026" name="UnloadReelTowerIdIsNotValid" enabled="true" report="false" severity="Major">
+    <Description culture="en-US" file=".rtf">
+      <Message>The unload reel tower id is not valid.</Message>
+      <Remedy>Check reel tower id and communication status.</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>언로드 릴 보관함 ID 가 유효하지 않습니다. 담당자에게 도윰 요청하세요.</Message>
+      <Remedy>릴 보관함 ID 를 확인 하고, 담당자에게 문의 하세요.</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="27" extra="EC0027" name="DetectedAReelOnGripper" enabled="true" report="true" severity="Major">
+    <Description culture="en-US" file=".rtf">
+      <Message>Detected a material in gripper.</Message>
+      <Remedy>Check gripper sensor then release suck material if it is there. Then retry.</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>로봇 집게에 릴이 감지 되었습니다.</Message>
+      <Remedy>감지된 이물 또는 물품을 제거하고, 재시도 하세요.</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="28" extra="EC0028" name="FailedToSetCartReelSize" enabled="true" report="false" severity="Major">
+    <Description culture="en-US" file=".rtf">
+      <Message>Failed to set cart reel size.</Message>
+      <Remedy>Check cart reel vision pattern and robot communication status. The retry.</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>카트의 릴 크기 설정이 잘못 되었습니다. 재시도 하세요.</Message>
+      <Remedy>카트 작업 영상의 패턴과 로봇 통신 상태를 확인 하고, 재시도 하세요.</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="29" extra="EC0029" name="FailToSetReturnReelSize" enabled="true" report="false" severity="Major">
+    <Description culture="en-US" file=".rtf">
+      <Message>Failed to set return reel size.</Message>
+      <Remedy>Check return reel state on return stage then retry.</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>반납 릴 크기 설정 실패 하였습니다.</Message>
+      <Remedy>반납 릴 상태를 확인 하고, 재시도 하세요.</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="30" extra="EC0030" name="RobotPositionIsNotMatched" enabled="true" report="true" severity="Major">
+    <Description culture="en-US" file=".rtf">
+      <Message>Robot position is not matched.</Message>
+      <Remedy>Check robot position and process step. Need to initialize with robot homing to retry.</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>로봇 위치를 확인 하세요. 재시도 하세요.</Message>
+      <Remedy>로봇 위치를 확인 하고, 로봇 초기화와 장비 초기화 후, 재시도 하세요.</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="31" extra="EC0031" name="RobotStateIsNotMactched" enabled="true" report="true" severity="Major">
+    <Description culture="en-US" file=".rtf">
+      <Message>Robot state is not matched.</Message>
+      <Remedy>Check robot state then initialize with robot homing to retry.</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>로봇 상태가 명령 수행 상태와 일치하지 않습니다. 재시도 하세요.</Message>
+      <Remedy>로봇 상태를 확인 하고, 로봇 초기화와 장비 초기화 후, 재시도 하세요.</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="32" extra="EC0032" name="FailedToPickUnloadReel" enabled="true" report="false" severity="Major">
+    <Description culture="en-US" file=".rtf">
+      <Message>Failed to pickup an unload reel.\r\nPlease Remove the Reel from Tower and Reset. </Message>
+      <Remedy>Check reel state on tower then continue the other operation. Try to clear remained unload job request queue if you need to cancel to unload.</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>언로드 된 릴을 집지 못했습니다. 릴 보관함에서 릴을 꺼내시고, 확인을 누르세요.</Message>
+      <Remedy>릴 보관함에 배출 된 릴 상태를 확인 하고, 연속해서 작업을 재 실행하세요. 필요하다면, 릴 보관함에서 배출 요구된 릴 목록들을 삭제하세요.</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="33" extra="EC0033" name="ReelTowerIsAlarmState" enabled="true" report="false" severity="Major">
+    <Description culture="en-US" file=".rtf">
+      <Message>Reel tower as alarm state.</Message>
+      <Remedy>Check reel tower state then request help.</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>릴 보관함이 경보 상태입니다. 확인 하시고, 담당자 도움을 요청하세요.</Message>
+      <Remedy>릴 보관함의 경보 상태를 확인 하고, 담당자에게 문의 하세요.</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="34" extra="EC0034" name="ReelTowerIsFull" enabled="true" report="false" severity="Major">
+    <Description culture="en-US" file=".rtf">
+      <Message>Reel tower is full.</Message>
+      <Remedy>Check reel tower state and hold store reel process.</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>릴 보관함이 모두 채워졌습니다. 담당자 도움을 요청하세요.</Message>
+      <Remedy>릴 보관함 상태를 확인 하고, 담당자에게 문의하거나, 릴 투입 작업을 보류 하세요.</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="35" extra="EC0035" name="ReelTowerIsBusy" enabled="true" report="false" severity="Major">
+    <Description culture="en-US" file=".rtf">
+      <Message>Reel tower is busy.</Message>
+      <Remedy>Check reel tower state and communication status. Try to reboot the reel tower program if it doesn't work.</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>릴 보관함이 응답하지 않습니다. 담당자 도움을 요청하세요.</Message>
+      <Remedy>릴 보관함 통신 상태를 확인 하고, 필요하다면, 릴 보관함 프로그램을 재실행 하세요.</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="36" extra="EC0036" name="RobotEmergencyStop" enabled="true" report="true" severity="Major">
+    <Description culture="en-US" file=".rtf">
+      <Message>Robot is stopped by emergency.</Message>
+      <Remedy>Robot homing and initialize the equipment. Then retry.</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>로봇이 비상정지 되었습니다.</Message>
+      <Remedy>로봇 초기화하고, 장비 초기화 후 재시도 하세요.</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="37" extra="EC0037" name="RobotProtectiveStop" enabled="true" report="true" severity="Major">
+    <Description culture="en-US" file=".rtf">
+      <Message>Robot is stopped by protective.</Message>
+      <Remedy>Robot homing and initialize the equipment. Try to change the reel position.</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>로봇이 보호 정지 되었습니다.</Message>
+      <Remedy>로봇 초기화하고, 장비 초기화 후 재시도 하세요. 필요하다면, 릴의 위치를 변경하세요.</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="38" extra="EC0038" name="RobotReelDetectionSensorFailure" enabled="true" report="false" severity="Major">
+    <Description culture="en-US" file=".rtf">
+      <Message>Reel detection sensor failure.</Message>
+      <Remedy>Check reel detection sensor then retry.</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>릴 감지 센서 오동작 하였습니다. 재시도 하세요.</Message>
+      <Remedy>릴 감지 센서 상태를 확인 하고, 재시도 하세요.</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="39" extra="EC0039" name="ReelBarcodeIsNotUnique" enabled="true" report="false" severity="Major">
+    <Description culture="en-US" file=".rtf">
+      <Message>Reel barcode is not unique.</Message>
+      <Remedy>Check reel barcode then request help to proceed it.</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>릴 바코드가 중복됩니다. 릴 바코드를 확인하세요.</Message>
+      <Remedy>릴 바코드 중복 여부를 확인 하고, 담당자에게 문의 하세요.</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="40" extra="EC0040" name="MobileRobotCommunicationFailure" enabled="true" report="false" severity="Major">
+    <Description culture="en-US" file=".rtf">
+      <Message>Mobile robot does not reply.</Message>
+      <Remedy>Check mobile robot communication status. Try to connect or change operation mode to manual.</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>모바일 로봇 통신 끊김. 모바일 로봇 통신 연결상태 확인하세요.</Message>
+      <Remedy>모바일 로봇 통신 상태를 확인 하고, 필요시 통신 상태를 재연결 또는 수동 모드로 전환하세요.</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="100" extra="EC0100" name="Tray_16_44_not_released" enabled="true" report="false" severity="Major">
+    <Description culture="en-US" file=".rtf">
+      <Message>Tray 16, 44 not released.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>트레이 16, 44 가 비어있지 않습니다.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="101" extra="EC0101" name="Reel_height_exceeded" enabled="true" report="false" severity="Major">
+    <Description culture="en-US" file=".rtf">
+      <Message>Reel height exceeded.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>릴 높이가 큽니다.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="102" extra="EC0102" name="Reel_not_recognized" enabled="true" report="false" severity="Major">
+    <Description culture="en-US" file=".rtf">
+      <Message>Reel not recognized.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>릴이 검출되지 않습니다.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="103" extra="EC0103" name="Tray_not_recognized" enabled="true" report="false" severity="Major">
+    <Description culture="en-US" file=".rtf">
+      <Message>Tray not recognized.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>트레이가 검출되지 않습니다.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="104" extra="EC0104" name="Reel_diameter_too_big" enabled="true" report="false" severity="Major">
+    <Description culture="en-US" file=".rtf">
+      <Message>Reel diameter too big.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>릴 직경이 큽니다.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="105" extra="EC0105" name="Reel_diameter_not_recognized" enabled="true" report="false" severity="Major">
+    <Description culture="en-US" file=".rtf">
+      <Message>Reel diameter not recognized.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>릴 직경이 검출되지 않습니다.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="106" extra="EC0106" name="No_scancode_Barcode_not_detected_during_test_run" enabled="true" report="false" severity="Major">
+    <Description culture="en-US" file=".rtf">
+      <Message>No scancode, Barcode not detected during test run.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>바코드가 테스트 운영 중 검출되지 않습니다.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="107" extra="EC0107" name="No_scancode_Barcode_not_detected_when_loading_carrier" enabled="true" report="false" severity="Major">
+    <Description culture="en-US" file=".rtf">
+      <Message>No scancode, Barcode not detected when loading carrier.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>캐리어 투입과정 중 바코드가 검출되지 않습니다.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="108" extra="EC0108" name="No_scancode_Barcode_not_detected_when_unloading_carrier" enabled="true" report="false" severity="Major">
+    <Description culture="en-US" file=".rtf">
+      <Message>No scancode, Barcode not detected when unloading carrier.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>캐리어 배출과정 중 바코드가 검출되지 않습니다.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="109" extra="EC0109" name="No_scancode_Barcode_not_detected_after_power_on_sequence" enabled="true" report="false" severity="Major">
+    <Description culture="en-US" file=".rtf">
+      <Message>No scancode, Barcode not detected after power on sequence.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>바코드 스캐너가 검출되지 않습니다.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="116" extra="EC0116" name="Invalid_data" enabled="true" report="false" severity="Major">
+    <Description culture="en-US" file=".rtf">
+      <Message>Invalid data.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>유효하지 않은 데이터 입니다.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="117" extra="EC0117" name="Operation_denied" enabled="true" report="false" severity="Major">
+    <Description culture="en-US" file=".rtf">
+      <Message>Operation denied.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>릴 타워 운영이 거부되었습니다.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="118" extra="EC0118" name="Code_error" enabled="true" report="false" severity="Major">
+    <Description culture="en-US" file=".rtf">
+      <Message>Code error.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>코드 오류가 발생 하였습니다.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="175" extra="EC0175" name="Error_arm_motor" enabled="true" report="false" severity="Major">
+    <Description culture="en-US" file=".rtf">
+      <Message>Error arm motor.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>릴 타워 내부 로봇 모터 경보가 발생 하였습니다.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="176" extra="EC0176" name="Arm_sensor_defect" enabled="true" report="false" severity="Major">
+    <Description culture="en-US" file=".rtf">
+      <Message>Arm sensor defect.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>릴 타워 내부 로봇 센서가 오작동 하였습니다.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="177" extra="EC0177" name="No_connection_between_arm_sensor_and_motor" enabled="true" report="false" severity="Major">
+    <Description culture="en-US" file=".rtf">
+      <Message>No connection between arm sensor and motor.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>릴 타워 내부 로봇 센서와 모터가 연결되지 않습니다.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="178" extra="EC0178" name="Error_arm_sensor" enabled="true" report="false" severity="Major">
+    <Description culture="en-US" file=".rtf">
+      <Message>Error arm sensor.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>릴 타워 내부 로봇 센서 경보가 발생 하였습니다.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="179" extra="EC0179" name="Slot_difference" enabled="true" report="false" severity="Major">
+    <Description culture="en-US" file=".rtf">
+      <Message>Slot difference.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>릴 타워 슬롯이 다릅니다.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="183" extra="EC0183" name="Incorrect_scanner_scanner" enabled="true" report="false" severity="Major">
+    <Description culture="en-US" file=".rtf">
+      <Message>Incorrect scanner firmware.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>릴 타워 바코드 스캐너 펌웨어가 부정확 합니다.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="184" extra="EC0184" name="Incorrect_arm_firmware" enabled="true" report="false" severity="Major">
+    <Description culture="en-US" file=".rtf">
+      <Message>Incorrect arm firmware.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>릴 타워 로봇 펌웨어가 부정확 합니다.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="185" extra="EC0185" name="Humidity_logger_not_responding" enabled="true" report="false" severity="Major">
+    <Description culture="en-US" file=".rtf">
+      <Message>Humidity logger not responding.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>온습도 점검기가 응답하지 않습니다.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="186" extra="EC0186" name="Fault_arm_motor" enabled="true" report="false" severity="Major">
+    <Description culture="en-US" file=".rtf">
+      <Message>Fault arm motor.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>릴 타워 내부 로봇 모터 결보가 발생 하였습니다.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="187" extra="EC0187" name="Error_voltage_3_3V" enabled="true" report="false" severity="Major">
+    <Description culture="en-US" file=".rtf">
+      <Message>Error voltage 3.3V.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>3.3 V 전압 오류가 발생 하였습니다.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="188" extra="EC0188" name="Error_voltage_60V" enabled="true" report="false" severity="Major">
+    <Description culture="en-US" file=".rtf">
+      <Message>Error voltage 60V.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>60 V 전압 오류가 발생 하였습니다.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="189" extra="EC0189" name="Rotor_motor_not_recognized" enabled="true" report="false" severity="Major">
+    <Description culture="en-US" file=".rtf">
+      <Message>Rotor motor not recognized.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>릴 타워 로터 모터가 검출되지 않습니다.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="190" extra="EC0190" name="Lift_motor_not_recognized" enabled="true" report="false" severity="Major">
+    <Description culture="en-US" file=".rtf">
+      <Message>Lift motor not recognized.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>릴 타워 리프트 모터가 검출되지 않습니다.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="191" extra="EC0191" name="Invalid_reel_height" enabled="true" report="false" severity="Major">
+    <Description culture="en-US" file=".rtf">
+      <Message>Invalid reel height.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>릴 높이가 유효하지 않습니다.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="192" extra="EC0192" name="Gripper_too_high" enabled="true" report="false" severity="Major">
+    <Description culture="en-US" file=".rtf">
+      <Message>Gripper too high.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>그립퍼 높이가 높습니다.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="193" extra="EC0193" name="Gripper_too_low" enabled="true" report="false" severity="Major">
+    <Description culture="en-US" file=".rtf">
+      <Message>Gripper too low.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>그립퍼 높이가 낮습니다.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="194" extra="EC0194" name="Arm_not_recognized_while_calibrating_lift" enabled="true" report="false" severity="Major">
+    <Description culture="en-US" file=".rtf">
+      <Message>Arm not recognized while calibrating lift.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>릴 타워 리프트 보정 중 내부 로봇이 검출 되지 않습니다.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="195" extra="EC0195" name="Arm_not_recognized_while_calibrating_rotor" enabled="true" report="false" severity="Major">
+    <Description culture="en-US" file=".rtf">
+      <Message>Arm not recognized while calibrating rotor.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>릴 타워 로터 보정 중 내부 로봇이 검출 되지 않습니다.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="196" extra="EC0196" name="Invalid_stack" enabled="true" report="false" severity="Major">
+    <Description culture="en-US" file=".rtf">
+      <Message>Invalid stack.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>스택이 유효하지 않습니다.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="197" extra="EC0197" name="Missing_or_invalid_firmware_in_rotor_motor" enabled="true" report="false" severity="Major">
+    <Description culture="en-US" file=".rtf">
+      <Message>Missing or invalid firmware in rotor motor.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>릴 타워 로터 모터의 펌웨어가 없거나, 부정확 합니다.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="198" extra="EC0198" name="Missing_or_invalid_firmware_in_lift_motor" enabled="true" report="false" severity="Major">
+    <Description culture="en-US" file=".rtf">
+      <Message>Missing or invalid firmware in lift motor.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>릴 타워 리프트 모터의 펌웨어가 없거나, 부정확 합니다.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="201" extra="EC0201" name="Lift_step_error" enabled="true" report="false" severity="Major">
+    <Description culture="en-US" file=".rtf">
+      <Message>Lift step error.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>릴 타워 리프트 공정 경보가 발생 하였습니다.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="204" extra="EC0204" name="Command_not_recognized_by_lift_motor" enabled="true" report="false" severity="Major">
+    <Description culture="en-US" file=".rtf">
+      <Message>Command not recognized by lift motor.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>릴 타워 리프트 모터 명령이 인식되지 않았습니다.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="205" extra="EC0205" name="Lift_sensor_error_encoder" enabled="true" report="false" severity="Major">
+    <Description culture="en-US" file=".rtf">
+      <Message>Lift sensor error encoder.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>릴 타워 리프트 센서 오류가 발생 하였습니다.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="208" extra="EC0208" name="Lift_motor_invalid_data" enabled="true" report="false" severity="Major">
+    <Description culture="en-US" file=".rtf">
+      <Message>Lift motor invalid data.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>릴 타워 리프트 모터 데이터가 유효하지 않습니다.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="209" extra="EC0209" name="Lift_motor_unknown_error" enabled="true" report="false" severity="Major">
+    <Description culture="en-US" file=".rtf">
+      <Message>Lift motor unknown error.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>릴 타워 리프트 모터에 알수 없는 오류가 발생 하였습니다.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="215" extra="EC0215" name="Sensor_error_encoder" enabled="true" report="false" severity="Major">
+    <Description culture="en-US" file=".rtf">
+      <Message>Sensor error encoder.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>엔코더 센서 오류가 발생 하였습니다.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="217" extra="EC0217" name="Command_recognized_by_rotor_motor" enabled="true" report="false" severity="Major">
+    <Description culture="en-US" file=".rtf">
+      <Message>Command not recognized by rotor motor.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>릴 타워 로터 모터 명령이 인식되지 않습니다.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="218" extra="EC0218" name="Rotot_motor_invalid_data" enabled="true" report="false" severity="Major">
+    <Description culture="en-US" file=".rtf">
+      <Message>Rotor motor invalid data.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>릴 타워 로터 모터 데이터가 유효하지 않습니다.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="219" extra="EC0219" name="Rotot_motor_unknown_error" enabled="true" report="false" severity="Major">
+    <Description culture="en-US" file=".rtf">
+      <Message>Rotor motor unknown error.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>릴 타워 로터 모터에 알수 없는 오류가 발생 하였습니다.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="221" extra="EC0221" name="Error_lid_while_opening" enabled="true" report="false" severity="Major">
+    <Description culture="en-US" file=".rtf">
+      <Message>Error lid while opening.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>릴 타워 도어 열기 중 오류가 발생 하였습니다.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="222" extra="EC0222" name="Error_lid_opening_top" enabled="true" report="false" severity="Major">
+    <Description culture="en-US" file=".rtf">
+      <Message>Error lid opening top.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>릴 타워 도어 위로 열기 과정 중 오류가 발생 하였습니다.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="224" extra="EC0224" name="Error_lid_closing_top" enabled="true" report="false" severity="Major">
+    <Description culture="en-US" file=".rtf">
+      <Message>Error lid closing top.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>릴 타워 도어 위로 닫기 과정 중 오류가 발생 하였습니다.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="225" extra="EC0225" name="Error_lid_closing_bottom" enabled="true" report="false" severity="Major">
+    <Description culture="en-US" file=".rtf">
+      <Message>Error lid closing bottom.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>릴 타워 도어 닫기 버튼 오류가 발생 하였습니다.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="229" extra="EC0229" name="Lid_open_while_driving" enabled="true" report="false" severity="Major">
+    <Description culture="en-US" file=".rtf">
+      <Message>Lid open while driving.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>운영 중 릴 타워 도어가 열였습니다.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="230" extra="EC0230" name="No_response_from_arm_motor" enabled="true" report="false" severity="Major">
+    <Description culture="en-US" file=".rtf">
+      <Message>No response from arm motor.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>릴 타워 내부 로봇 모터로 부터 응답이 없습니다.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="231" extra="EC0231" name="Error_clamping_on_closing_1" enabled="true" report="false" severity="Major">
+    <Description culture="en-US" file=".rtf">
+      <Message>Error clamping on closing 1.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>그립퍼 닫기 동작 1 과정 중 오류가 발생 하였습니다.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="232" extra="EC0232" name="Error_clamping_on_closing_2" enabled="true" report="false" severity="Major">
+    <Description culture="en-US" file=".rtf">
+      <Message>Error clamping on closing 2.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>그립퍼 닫기 동작 2 과정 중 오류가 발생 하였습니다.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="233" extra="EC0233" name="Error_clamping_on_opening_1" enabled="true" report="false" severity="Major">
+    <Description culture="en-US" file=".rtf">
+      <Message>Error clamping on opening 1.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>그립퍼 열기 동작 1 과정 중 오류가 발생 하였습니다.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="234" extra="EC0234" name="Error_clamping_on_opening_2" enabled="true" report="false" severity="Major">
+    <Description culture="en-US" file=".rtf">
+      <Message>Error clamping on opening 2.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>그립퍼 열기 동작 2 과정 중 오류가 발생 하였습니다.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="235" extra="EC0235" name="Error_arm_init_to_front" enabled="true" report="false" severity="Major">
+    <Description culture="en-US" file=".rtf">
+      <Message>Error arm init to front.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>릴 타워 내부 로봇의 앞으로 이동하는 초기화 과정 중 오류가 발생 하였습니다.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="236" extra="EC0236" name="Error_arm_init_to_back" enabled="true" report="false" severity="Major">
+    <Description culture="en-US" file=".rtf">
+      <Message>Error arm init to back.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>릴 타워 내부 로봇의 뒤로 이동하는 초기화 과정 중 오류가 발생 하였습니다.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="237" extra="EC0237" name="Error_arm_blocked" enabled="true" report="false" severity="Major">
+    <Description culture="en-US" file=".rtf">
+      <Message>Error arm blocked.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>릴 타워 내부 로봇이 동작하지 못하도록 설정 되었습니다.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="238" extra="EC0238" name="Arm_not_in_stand_still" enabled="true" report="false" severity="Major">
+    <Description culture="en-US" file=".rtf">
+      <Message>Arm not stand still.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>릴 타워 내부 로봇이 정지 하지 않았습니다.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="239" extra="EC0239" name="Arm_board_not_recogninzed" enabled="true" report="false" severity="Major">
+    <Description culture="en-US" file=".rtf">
+      <Message>Arm board not recognized.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>릴 타워 내부 로봇 제어 보드가 검출 되지 않습니다.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="240" extra="EC0240" name="Scanner_board_not_recogninzed" enabled="true" report="false" severity="Major">
+    <Description culture="en-US" file=".rtf">
+      <Message>Scanner board not recognized.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>릴 타워 바코드 스캐너 보드가 검출 되지 않습니다.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="241" extra="EC0241" name="Error_clamping_on_init_1" enabled="true" report="false" severity="Major">
+    <Description culture="en-US" file=".rtf">
+      <Message>Error clamping on init 1.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>초기화 1 과정 중 잡지 못했습니다.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="242" extra="EC0242" name="Error_clamping_on_init_2" enabled="true" report="false" severity="Major">
+    <Description culture="en-US" file=".rtf">
+      <Message>Error clamping on init 2.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>초기화 2 과정 중 잡지 못했습니다.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="243" extra="EC0243" name="Error_clamping_while_driving_1" enabled="true" report="false" severity="Major">
+    <Description culture="en-US" file=".rtf">
+      <Message>Error clamping while driving 1.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>운영 1 과정 중 잡지 못했습니다.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="244" extra="EC0244" name="Error_clamping_while_driving_2" enabled="true" report="false" severity="Major">
+    <Description culture="en-US" file=".rtf">
+      <Message>Error clamping while driving 2.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>운영 2 과정 중 잡지 못했습니다.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="245" extra="EC0245" name="Missing_or_invalid_firmware_in_arm_motor" enabled="true" report="false" severity="Major">
+    <Description culture="en-US" file=".rtf">
+      <Message>Missing or invliad firmware in arm motor.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>릴 타워 내부 로봇 모터의 펌웨어가 없거나, 부정확 합니다.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="246" extra="EC0246" name="No_tableau_on_magazine_calibration" enabled="true" report="false" severity="Major">
+    <Description culture="en-US" file=".rtf">
+      <Message>No tableau on magazine calibration.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>매거진 보정 과정 중 검출되지 않았습니다. </Message>
+      <Remedy>None</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="247" extra="EC0247" name="No_screening_control_rotor" enabled="true" report="false" severity="Major">
+    <Description culture="en-US" file=".rtf">
+      <Message>No screening control rotor.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>릴 타워 로터 제어 상태 표식 오류가 발생 하였습니다.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="248" extra="EC0248" name="No_screening_control_arm" enabled="true" report="false" severity="Major">
+    <Description culture="en-US" file=".rtf">
+      <Message>No screening control arm.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>릴 타워 내부 로봇 제어 상태 표식 오류가 발생 하였습니다.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="249" extra="EC0249" name="Error_reel_sensor" enabled="true" report="false" severity="Major">
+    <Description culture="en-US" file=".rtf">
+      <Message>Error reel sensor.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>릴 검출 센서 오류가 발생 하였습니다.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="250" extra="EC0250" name="Error_lid" enabled="true" report="false" severity="Major">
+    <Description culture="en-US" file=".rtf">
+      <Message>Error lid.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>릴 타워 도어 오류가 발생 하였습니다.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="251" extra="EC0251" name="Error_arm" enabled="true" report="false" severity="Major">
+    <Description culture="en-US" file=".rtf">
+      <Message>Error arm.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>릴 타워 내부 로봇 오류가 발생 하였습니다.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="252" extra="EC0252" name="Error_clamping" enabled="true" report="false" severity="Major">
+    <Description culture="en-US" file=".rtf">
+      <Message>Error clamping.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>물품 잡기 오류가 발생 하였습니다.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="253" extra="EC0253" name="Error_scanner_setting" enabled="true" report="false" severity="Major">
+    <Description culture="en-US" file=".rtf">
+      <Message>Error scanner setting.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>릴 타워 바코드 스캐너 설정이 잘못 되었습니다.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="254" extra="EC0254" name="Calibration_of_diameter_failed" enabled="true" report="false" severity="Major">
+    <Description culture="en-US" file=".rtf">
+      <Message>Calibration of diameter failed.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>직경 검출 보정이 실패 하였습니다.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="255" extra="EC0255" name="Calibration_of_height_failed" enabled="true" report="false" severity="Major">
+    <Description culture="en-US" file=".rtf">
+      <Message>Calibration of height failed.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>높이 검출 보정이 실패 하였습니다.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="777" extra="EC0777" name="Invalid_scan_code" enabled="true" report="false" severity="Major">
+    <Description culture="en-US" file=".rtf">
+      <Message>Invalid scan code.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>바코드 스캔 코드가 유효하지 않습니다.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+  </Alarm>
+  <Alarm id="999" extra="EC0999" name="Communication_timeout" enabled="true" report="false" severity="Major">
+    <Description culture="en-US" file=".rtf">
+      <Message>Communication timeout.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+    <Description culture="ko-KR" file=".rtf">
+      <Message>릴 타워 통신 오류가 발생 하였습니다.</Message>
+      <Remedy>None</Remedy>
+    </Description>
+  </Alarm>
+</Alarms>

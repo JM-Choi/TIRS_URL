@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="RoyoTech.StSys" elementFormDefault="qualified" targetNamespace="RoyoTech.StSys" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="WebServiceIsConnected">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebServiceIsConnectedResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="WebServiceIsConnectedResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="XmlAction">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="xmlData" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="XmlActionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="XmlActionResult" nillable="true">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:any minOccurs="0" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
