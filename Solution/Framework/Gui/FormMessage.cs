@@ -350,10 +350,14 @@ namespace TechFloor.Gui
         #endregion
 
         #region Private methods
+        static FormMessage Dialog = null;
         private static DialogResult ShowMessageDialog(string message, string caption, Buttons buttons, Icons icon, bool autoclose, int autoclosedelay, bool buzzer, bool recovery = false)
         {
-            FormMessage form = new FormMessage(message, caption, buttons, icon, autoclose, autoclosedelay, buzzer, recovery);
-            return form.ShowDialog();
+            //FormMessage form = new FormMessage(message, caption, buttons, icon, autoclose, autoclosedelay, buzzer, recovery);
+            Dialog = new FormMessage(message, caption, buttons, icon, autoclose, autoclosedelay, buzzer, recovery);
+            DialogResult result = Dialog.ShowDialog();
+            Dialog = null;
+            return result;
         }
 
         private static void ShowMessage(string message, string caption, Buttons buttons, Icons icon, bool autoclose, int autoclosedelay, bool buzzer)
@@ -425,6 +429,14 @@ namespace TechFloor.Gui
         #endregion
 
         #region Public methods
+        public static void CloseDialog()
+        {
+            if (Dialog != null)
+            {
+                Dialog.Close();
+            }
+        }
+
         public static DialogResult ShowWarning(string message, Buttons buttons = Buttons.Ok, bool autoclose = false, int autoclosedelay = 10000)
         {
             return ShowMessageDialog(message, "WARNING", buttons, Icons.Warning, autoclose, autoclosedelay, false);

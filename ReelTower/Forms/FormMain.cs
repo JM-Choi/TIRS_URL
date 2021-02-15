@@ -1203,11 +1203,68 @@ namespace TechFloor
                                     ctrlValue_.Text = e.State.ToString();
                                     ctrlValue_.BackColor = SystemColors.Window;
                                     ctrlValue_.ForeColor = SystemColors.ControlText;
+
+                                    if (e.StatusText == "Remove Component Reel" || e.StatusText == "Component in terminal")
+                                    {
+                                        mainSequence.newammtwrstatus[ctrlTitle_.Text].reelonoff = "ON";
+                                    }
+                                    else if (e.StatusText == "Ready" || e.StatusText == "Moving component to stock" || e.StatusText == "Detecting Slot position" || e.StatusText == "Providing component")
+                                    {
+                                        mainSequence.newammtwrstatus[ctrlTitle_.Text].reelonoff = "OFF";
+                                    }
+
+                                    if (ctrlValue_.Text == "RequestedToUnload")
+                                    {
+                                        mainSequence.newammtwrstatus[ctrlTitle_.Text].towerjobstate = "UNLOAD";
+                                    }
+                                    else if (ctrlValue_.Text == "RequestedToLoad")
+                                    {
+                                        mainSequence.newammtwrstatus[ctrlTitle_.Text].towerjobstate = "LOAD";
+                                    }
+                                    //else if (ctrlValue_.Text == "PrepareToLoad")
+                                    //{
+                                    //    mainSequence.newammtwrstatus[ctrlTitle_.Text].towerjobstate = "RUN";
+                                    //}
+
+                                    ReadyCheck(ctrlTitle_);
+
+                                    if (mainSequence.CommunicationStatesOfAMM == CommunicationStates.Connected && (mainSequence.ammtwrstatus[ctrlTitle_.Text].towerjobstate != mainSequence.newammtwrstatus[ctrlTitle_.Text].towerjobstate
+                                        || mainSequence.ammtwrstatus[ctrlTitle_.Text].reelonoff != mainSequence.newammtwrstatus[ctrlTitle_.Text].reelonoff))
+                                    {
+                                        Debug.WriteLine($"FormMain TOWER={e.Name} Reel ON/OFF = {mainSequence.ammtwrstatus[ctrlTitle_.Text].reelonoff} TowerJobState = {mainSequence.ammtwrstatus[ctrlTitle_.Text].towerjobstate}");
+                                        mainSequence.ammtwrstatus[ctrlTitle_.Text].reelonoff = mainSequence.newammtwrstatus[ctrlTitle_.Text].reelonoff;
+                                        mainSequence.ammtwrstatus[ctrlTitle_.Text].towerjobstate = mainSequence.newammtwrstatus[ctrlTitle_.Text].towerjobstate;
+                                        Debug.WriteLine($"FormMain TOWER={e.Name} Reel ON/OFF = {mainSequence.ammtwrstatus[ctrlTitle_.Text].reelonoff} TowerJobState = {mainSequence.ammtwrstatus[ctrlTitle_.Text].towerjobstate}");
+
+
+                                        string val = mainSequence.Set_Twr_State(e.Name, mainSequence.ammtwrstatus[ctrlTitle_.Text].reelonoff,
+                                            mainSequence.ammtwrstatus[ctrlTitle_.Text].towerjobstate);
+
+                                        Debug.WriteLine($"FormMain Set TOWER={val}");
+                                        Debug.WriteLine($"FormMain GET TOWER={e.Name} State={mainSequence.Get_Twr_State(e.Name)} Get Reel={mainSequence.Get_Twr_State_Reel(e.Name)} Get Job={mainSequence.Get_Twr_State_Job(e.Name)}");
+                                    }
                                 }
                             }
                         }
                         break;
                 }
+            }
+        }
+
+        public void ReadyCheck(Control ctrlTitle_)
+        {
+            Control ctrlValue_1 = tableLayoutPanelTitle.Controls["labelTower1StatusValue"];
+            Control ctrlValue_2 = tableLayoutPanelTitle.Controls["labelTower2StatusValue"];
+            Control ctrlValue_3 = tableLayoutPanelTitle.Controls["labelTower3StatusValue"];
+            Control ctrlValue_4 = tableLayoutPanelTitle.Controls["labelTower4StatusValue"];
+
+            if (ctrlValue_1.Text == "Idle" && ctrlValue_2.Text == "Idle" && ctrlValue_3.Text == "Idle" && ctrlValue_4.Text == "Idle")
+            {
+                mainSequence.newammtwrstatus["TOWER1"].towerjobstate = "RUN";
+                mainSequence.newammtwrstatus["TOWER2"].towerjobstate = "RUN";
+                mainSequence.newammtwrstatus["TOWER3"].towerjobstate = "RUN";
+                mainSequence.newammtwrstatus["TOWER4"].towerjobstate = "RUN";
+                mainSequence.SetEqStatus("READY");
             }
         }
 
@@ -3447,7 +3504,8 @@ namespace TechFloor
                 dataGridViewQueuedJobs.Columns.Add("State", "State");
             }
 
-            dataGridViewQueuedJobs.Rows.Add(jobname_, user_, stages_, containers_, ProvideJobListData.States.Created.ToString());
+            if (!dataGridViewQueuedJobs.Columns.Contains(jobname_))
+                dataGridViewQueuedJobs.Rows.Add(jobname_, user_, stages_, containers_, ProvideJobListData.States.Created.ToString());
         }
 
         protected void OnClickButtonStartJob(object sender, EventArgs e)
@@ -3479,14 +3537,15 @@ namespace TechFloor
             {
                 switch (mainSequence.GetProvideJobState(dataGridViewQueuedJobs.SelectedRows[0].Cells["Jobname"].Value.ToString()))
                 {
-                    case ProvideJobListData.States.Providing:
-                        {
-                            if (mainSequence.IsFinishedJob(dataGridViewQueuedJobs.SelectedRows[0].Cells["Jobname"].Value.ToString()))
-                                result_ = true;
-                            else
-                                FormMessageExt.ShowWarning(Properties.Resources.String_FormMain_Cancel, Buttons.Ok, true, 5000);
-                        }
-                        break;
+                    // 210202 (jm.choi) - Providing에도 삭제 가능하도록 조치
+                    //case ProvideJobListData.States.Providing:
+                    //    {
+                    //        if (mainSequence.IsFinishedJob(dataGridViewQueuedJobs.SelectedRows[0].Cells["Jobname"].Value.ToString()))
+                    //            result_ = true;
+                    //        else
+                    //            FormMessageExt.ShowWarning(Properties.Resources.String_FormMain_Cancel, Buttons.Ok, true, 5000);
+                    //    }
+                    //    break;
                     default:
                         {
                             result_ = true;
@@ -4352,8 +4411,18 @@ namespace TechFloor
                     {
                         recv_result = "FAILDE_WEBSERVICE";
                         mainSequence.AMMWebServiceResult = false;
-                        mainSequence.SetUnloadOut_Manual(dataGridViewQueryResults.Rows[i].Cells[4].Value.ToString(), mainSequence.AMMWebServiceResult);
+                        //mainSequence.SetUnloadOut_Manual(dataGridViewQueryResults.Rows[i].Cells[4].Value.ToString(), mainSequence.AMMWebServiceResult);
                         Logger.Alarm($"AMM Alarm=SetUnloadOut_Manual:{recv_result}");
+                    }
+                    finally
+                    {
+                        if (recv_result != "OK" && recv_result != "NG")
+                        {
+                            recv_result = "FAILDE_WEBSERVICE";
+                            mainSequence.AMMWebServiceResult = false;
+                            mainSequence.SetUnloadOut_Manual(dataGridViewQueryResults.Rows[i].Cells[4].Value.ToString(), mainSequence.AMMWebServiceResult);
+                            Logger.Alarm($"AMM Alarm=SetUnloadOut_Manual:{recv_result}");
+                        }
                     }
 
                     if (recv_result == "FAILDE_WEBSERVICE")

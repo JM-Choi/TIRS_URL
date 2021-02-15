@@ -4699,7 +4699,9 @@ namespace TechFloor.Service.MYCRONIC.WebService
 
         public virtual string SetEqEnd()
         {
-            string result_ = ReelTowerAMM.SetEqEnd(linecode, groupname);
+            string result_ = string.Empty;
+            if (ReelTowerAMM.MSSql != null)
+                result_ = ReelTowerAMM.SetEqEnd(linecode, groupname);
 
             return result_;
         }
@@ -4823,6 +4825,26 @@ namespace TechFloor.Service.MYCRONIC.WebService
                     break;
             }
             return result_;
+        }
+
+        public virtual string Set_Twr_State(string TowerID, string ReelOnOff, string TowerJobState)
+        {
+            return ReelTowerAMM.Set_Twr_State(linecode, TowerID, ReelOnOff, TowerJobState);
+        }
+
+        public virtual string Get_Twr_State(string TowerID)
+        {
+            return ReelTowerAMM.Get_Twr_State(linecode, TowerID);
+        }
+
+        public virtual string Get_Twr_State_Job(string TowerID)
+        {
+            return ReelTowerAMM.Get_Twr_State_Job(linecode, TowerID);
+        }
+
+        public virtual string Get_Twr_State_Reel(string TowerID)
+        {
+            return ReelTowerAMM.Get_Twr_State_Reel(linecode, TowerID);
         }
     }
     #endregion

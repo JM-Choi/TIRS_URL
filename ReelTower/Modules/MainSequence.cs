@@ -698,9 +698,247 @@ namespace TechFloor
 
         public virtual string SetUnloadStart(string pickingid) => ReelTowerGroupObject.SetUnloadStart(pickingid);
 
-        public virtual string SetUnloadOut(string uid, bool bWebService) => ReelTowerGroupObject.SetUnloadOut(uid, bWebService);
+        //public virtual string SetUnloadOut(string uid, bool bWebService) => ReelTowerGroupObject.SetUnloadOut(uid, bWebService);
+        public string SetUnloadOut(string carriername_, bool bWebService, string towerid = "", bool another = true)
+        {
+            string result = string.Empty;
+            string res_ = string.Empty;
+            if ((App.MainForm as FormMain).InvokeRequired)
+            {
+                (App.MainForm as FormMain).BeginInvoke(new Action(() =>
+                {
+                    try
+                    {
+                        if (another && !string.IsNullOrEmpty(towerid))
+                        {
+                            Debug.WriteLine($"SetUnloadOut TOWER={towerid} Reel ON/OFF = {ammtwrstatus["TOWER" + towerid.Substring(4, 1)].reelonoff} TowerJobState = {ammtwrstatus["TOWER" + towerid.Substring(4, 1)].towerjobstate}");
+                            //ammtwrstatus["TOWER" + towerid.Substring(4, 1)].towerjobstate = "RUN";
+                            //newammtwrstatus["TOWER" + towerid.Substring(4, 1)].towerjobstate = "RUN";
+                            ammtwrstatus["TOWER" + towerid.Substring(4, 1)].reelonoff = "ON";
+                            newammtwrstatus["TOWER" + towerid.Substring(4, 1)].reelonoff = "ON";
+                            Debug.WriteLine($"SetUnloadOut TOWER={towerid} Reel ON/OFF = {ammtwrstatus["TOWER" + towerid.Substring(4, 1)].reelonoff} TowerJobState = {ammtwrstatus["TOWER" + towerid.Substring(4, 1)].towerjobstate}");
+                            Set_Twr_State(towerid, ammtwrstatus["TOWER" + towerid.Substring(4, 1)].reelonoff,
+                                ammtwrstatus["TOWER" + towerid.Substring(4, 1)].towerjobstate);
 
-        public virtual string SetUnloadOut_Manual(string uid, bool bWebService) => ReelTowerGroupObject.SetUnloadOut_Manual(uid, bWebService);
+                            Debug.WriteLine($"SetUnloadOut GET TOWER={towerid} State={Get_Twr_State(towerid)} Get Reel={Get_Twr_State_Reel(towerid)} Get Job={Get_Twr_State_Job(towerid)}");                            
+                        }
+                        Logger.Trace($"{this.GetType().Name}.{MethodBase.GetCurrentMethod().Name}: UID : {carriername_}, WebService : {bWebService}");
+                        res_ = ReelTowerGroupObject.SetUnloadOut(carriername_, AMMWebServiceResult);
+                        Logger.Trace($"{this.GetType().Name}.{MethodBase.GetCurrentMethod().Name}: UID : {carriername_}, WebService : {bWebService}");
+                    }
+                    catch
+                    {
+                        res_ = "FAILDE_WEBSERVICE";
+                        AMMWebServiceResult = false;
+                        //SetUnloadOut(carriername_, AMMWebServiceResult);
+                        Logger.Alarm($"AMM Alarm=SetUnloadOut:{res_}");
+                    }
+                    finally
+                    {
+                        if (res_ != "OK" && res_ != "NG")
+                        {
+                            res_ = "FAILDE_WEBSERVICE";
+                            AMMWebServiceResult = false;
+                            ReelTowerGroupObject.SetUnloadOut(carriername_, AMMWebServiceResult);
+                            Logger.Alarm($"AMM Alarm=SetUnloadOut_Manual:{res_}");
+                        }
+                    }
+
+                    if (res_ == "FAILDE_WEBSERVICE")
+                    {
+                        AMMWebServiceResult = false;
+                        Logger.Alarm($"AMM Alarm=SetUnloadOut:{res_}");
+
+                        if (!AMMstatusUpdateTimer.Enabled)
+                            AMMstatusUpdateTimer.Enabled = true;
+                    }
+                    else if (res_ == "NG")
+                    {
+                        CommunicationStatesOfAMM = CommunicationStates.Disconnected;
+                        CommunicationWaitOfAMM = CommunicationStates.None;
+                        Logger.Alarm($"AMM Alarm=SetUnloadOut:{res_}");
+                    }
+
+                    if (another)
+                    {
+                        ProvideJobManager.RemoveItem(pickingid, carriername_);
+                        if (ProvideJobManager.IsCompleted(pickingid))
+                        {
+                            try
+                            {
+                                if (SetUnloadEnd(pickingid) == "NG")
+                                {
+                                    CommunicationStatesOfAMM = CommunicationStates.Disconnected;
+                                    CommunicationWaitOfAMM = CommunicationStates.None;
+                                    Logger.Alarm($"AMM Alarm=SetUnloadEnd:NG");
+                                }
+                            }
+                            finally
+                            {
+                                //if (SetEqStatus("RUN", "COMPLETE") == "NG")
+                                //{
+                                //    CommunicationStatesOfAMM = CommunicationStates.Disconnected;
+                                //    CommunicationWaitOfAMM = CommunicationStates.None;
+                                //    Logger.Alarm($"AMM Alarm=SetEqStatus:NG");
+                                //}
+
+                                CommunicationWaitOfAMM = CommunicationStates.None;
+                                ProvideJobManager.RemoveJob(pickingid);
+                                if (ProvideJobManager.jobs.Count == 0)
+                                {
+                                    ammtwrstatus["TOWER" + towerid.Substring(4, 1)].towerjobstate = "RUN";
+                                    newammtwrstatus["TOWER" + towerid.Substring(4, 1)].towerjobstate = "RUN";
+                                    Set_Twr_State(towerid, ammtwrstatus["TOWER" + towerid.Substring(4, 1)].reelonoff,
+                                        ammtwrstatus["TOWER" + towerid.Substring(4, 1)].towerjobstate);
+                                }
+                                pickingid = string.Empty;
+                            }
+                        }
+                    }
+                }));
+            }
+            else
+            {
+                try
+                {
+                    if (another && !string.IsNullOrEmpty(towerid))
+                    {
+                        Debug.WriteLine($"SetUnloadOut TOWER={towerid} Reel ON/OFF = {ammtwrstatus["TOWER" + towerid.Substring(4, 1)].reelonoff} TowerJobState = {ammtwrstatus["TOWER" + towerid.Substring(4, 1)].towerjobstate}");
+                        //ammtwrstatus["TOWER" + towerid.Substring(4, 1)].towerjobstate = "RUN";
+                        //newammtwrstatus["TOWER" + towerid.Substring(4, 1)].towerjobstate = "RUN";
+                        ammtwrstatus["TOWER" + towerid.Substring(4, 1)].reelonoff = "ON";
+                        newammtwrstatus["TOWER" + towerid.Substring(4, 1)].reelonoff = "ON";
+                        Debug.WriteLine($"SetUnloadOut TOWER={towerid} Reel ON/OFF = {ammtwrstatus["TOWER" + towerid.Substring(4, 1)].reelonoff} TowerJobState = {ammtwrstatus["TOWER" + towerid.Substring(4, 1)].towerjobstate}");
+                        Set_Twr_State(towerid, ammtwrstatus["TOWER" + towerid.Substring(4, 1)].reelonoff,
+                            ammtwrstatus["TOWER" + towerid.Substring(4, 1)].towerjobstate);
+                    }
+                    Logger.Trace($"{this.GetType().Name}.{MethodBase.GetCurrentMethod().Name}: UID : {carriername_}, WebService : {bWebService}");
+                    res_ = ReelTowerGroupObject.SetUnloadOut(carriername_, AMMWebServiceResult);
+                    Logger.Trace($"{this.GetType().Name}.{MethodBase.GetCurrentMethod().Name}: UID : {carriername_}, WebService : {bWebService}");
+                }
+                catch
+                {
+                    res_ = "FAILDE_WEBSERVICE";
+                    AMMWebServiceResult = false;
+                    //SetUnloadOut(carriername_, AMMWebServiceResult);
+                    Logger.Alarm($"AMM Alarm=SetUnloadOut:{res_}");
+                }
+                finally
+                {
+                    if (res_ != "OK" && res_ != "NG")
+                    {
+                        res_ = "FAILDE_WEBSERVICE";
+                        AMMWebServiceResult = false;
+                        ReelTowerGroupObject.SetUnloadOut(carriername_, AMMWebServiceResult);
+                        Logger.Alarm($"AMM Alarm=SetUnloadOut_Manual:{res_}");
+                    }
+                }
+
+                if (res_ == "FAILDE_WEBSERVICE")
+                {
+                    AMMWebServiceResult = false;
+                    Logger.Alarm($"AMM Alarm=SetUnloadOut:{res_}");
+
+                    if (!AMMstatusUpdateTimer.Enabled)
+                        AMMstatusUpdateTimer.Enabled = true;
+                }
+                else if (res_ == "NG")
+                {
+                    CommunicationStatesOfAMM = CommunicationStates.Disconnected;
+                    CommunicationWaitOfAMM = CommunicationStates.None;
+                    Logger.Alarm($"AMM Alarm=SetUnloadOut:{res_}");
+                }
+
+                if (another)
+                {
+                    ProvideJobManager.RemoveItem(pickingid, carriername_);
+                    if (ProvideJobManager.IsCompleted(pickingid))
+                    {
+                        try
+                        {
+                            if (SetUnloadEnd(pickingid) == "NG")
+                            {
+                                CommunicationStatesOfAMM = CommunicationStates.Disconnected;
+                                CommunicationWaitOfAMM = CommunicationStates.None;
+                                Logger.Alarm($"AMM Alarm=SetUnloadEnd:NG");
+                            }
+                        }
+                        finally
+                        {
+                            //if (SetEqStatus("RUN", "COMPLETE") == "NG")
+                            //{
+                            //    CommunicationStatesOfAMM = CommunicationStates.Disconnected;
+                            //    CommunicationWaitOfAMM = CommunicationStates.None;
+                            //    Logger.Alarm($"AMM Alarm=SetEqStatus:NG");
+                            //}
+
+                            CommunicationWaitOfAMM = CommunicationStates.None;
+                            ProvideJobManager.RemoveJob(pickingid);
+                            pickingid = string.Empty;
+                        }
+                    }
+                }
+            }
+            return result;
+        }
+
+        //public virtual string SetUnloadOut_Manual(string uid, bool bWebService) => ReelTowerGroupObject.SetUnloadOut_Manual(uid, bWebService);
+        public virtual string SetUnloadOut_Manual(string uid, bool bWebService, string towerid = "")
+        {
+            string result = string.Empty;
+            if ((App.MainForm as FormMain).InvokeRequired)
+            {
+                (App.MainForm as FormMain).BeginInvoke(new Action(() =>
+                {
+                    try
+                    {
+                        if (string.IsNullOrEmpty(towerid))
+                        {
+                            //ammtwrstatus["TOWER" + towerid.Substring(4, 1)].towerjobstate = "RUN";
+                            //newammtwrstatus["TOWER" + towerid.Substring(4, 1)].towerjobstate = "RUN";
+                            ammtwrstatus["TOWER" + towerid.Substring(4, 1)].reelonoff = "ON";
+                            newammtwrstatus["TOWER" + towerid.Substring(4, 1)].reelonoff = "ON";
+                            Set_Twr_State(towerid, ammtwrstatus["TOWER" + towerid.Substring(4, 1)].reelonoff,
+                                ammtwrstatus["TOWER" + towerid.Substring(4, 1)].towerjobstate);
+                        }
+                        Logger.Trace($"{this.GetType().Name}.{MethodBase.GetCurrentMethod().Name}: UID : {uid}, WebServiceFlag : {AMMWebServiceResult}");
+                        result = ReelTowerGroupObject.SetUnloadOut_Manual(uid, bWebService);
+                        if (result == "FAILDE_WEBSERVICE")
+                            AMMWebServiceResult = false;
+                    }
+                    catch (Exception)
+                    {
+                        result = "FAILDE_WEBSERVICE";
+                        AMMWebServiceResult = false;
+                    }
+                }));
+            }
+            else
+            {
+                try
+                {
+                    if (string.IsNullOrEmpty(towerid))
+                    {
+                        //ammtwrstatus["TOWER" + towerid.Substring(4, 1)].towerjobstate = "RUN";
+                        //newammtwrstatus["TOWER" + towerid.Substring(4, 1)].towerjobstate = "RUN";
+                        ammtwrstatus["TOWER" + towerid.Substring(4, 1)].reelonoff = "ON";
+                        newammtwrstatus["TOWER" + towerid.Substring(4, 1)].reelonoff = "ON";
+                        Set_Twr_State(towerid, ammtwrstatus["TOWER" + towerid.Substring(4, 1)].reelonoff,
+                            ammtwrstatus["TOWER" + towerid.Substring(4, 1)].towerjobstate);
+                    }
+                    Logger.Trace($"{this.GetType().Name}.{MethodBase.GetCurrentMethod().Name}: UID : {uid}, WebServiceFlag : {AMMWebServiceResult}");
+                    result = ReelTowerGroupObject.SetUnloadOut_Manual(uid, bWebService);
+                    if (result == "FAILDE_WEBSERVICE")
+                        AMMWebServiceResult = false;
+                }
+                catch (Exception ex)
+                { 
+                    result = "FAILDE_WEBSERVICE";
+                    AMMWebServiceResult = false;
+                }
+            }
+            return result;
+        }
 
         public virtual string SetUnloadEnd(string pickingid) => ReelTowerGroupObject.SetUnloadEnd(pickingid);
 
@@ -715,19 +953,18 @@ namespace TechFloor
 
         public virtual DataTable GetMTLInfo(int index, string data) => ReelTowerGroupObject.GetMTLInfo(index, data);
 
-        // public Dictionary<string, List<string>> pickinguids = new Dictionary<string, List<string>>();
-        // 
-        // public Dictionary<string, List<string>> pickingsids = new Dictionary<string, List<string>>();
-        // 
-        // public List<string> pickinguid = new List<string>();
-        // 
-        // public List<string> pickingsid = new List<string>();
+        // UPDATED: 20210202 (jm.choi)
+        public virtual string Set_Twr_State(string TowerID, string ReelOnOff, string TowerJobState) => ReelTowerGroupObject.Set_Twr_State(TowerID, ReelOnOff, TowerJobState);
+
+        public virtual string Get_Twr_State(string TowerID) => ReelTowerGroupObject.Get_Twr_State(TowerID);
+
+        public virtual string Get_Twr_State_Job(string TowerID) => ReelTowerGroupObject.Get_Twr_State_Job(TowerID);
+
+        public virtual string Get_Twr_State_Reel(string TowerID) => ReelTowerGroupObject.Get_Twr_State_Reel(TowerID);
+
+
 
         public string pickingid = string.Empty;
-
-        //public int pickingqty = 0;
-
-        //public string pickingusername = string.Empty;
 
         public bool WaitPicking = false;
 
@@ -756,6 +993,9 @@ namespace TechFloor
         protected int PrepareToLoadTimeCount = 0;
 
         protected bool PrepareToLoadSuccess = false;
+
+        public Dictionary<string, AMMTWRSTATUS> ammtwrstatus = new Dictionary<string, AMMTWRSTATUS>();
+        public Dictionary<string, AMMTWRSTATUS> newammtwrstatus = new Dictionary<string, AMMTWRSTATUS>();
 
         public bool IsTowerPendingUnload(string towerid) => normalUnloadPendingMaterials.ContainsKey(towerid);
 
@@ -833,6 +1073,27 @@ namespace TechFloor
                 this.CombineModuleManager.StartAll();
                 this.ReelTowerNotificationListenerObject.GetMessage();
             }
+
+            ammtwrstatus.Add("TOWER1", new AMMTWRSTATUS());
+            ammtwrstatus.Add("TOWER2", new AMMTWRSTATUS());
+            ammtwrstatus.Add("TOWER3", new AMMTWRSTATUS());
+            ammtwrstatus.Add("TOWER4", new AMMTWRSTATUS());
+            newammtwrstatus.Add("TOWER1", new AMMTWRSTATUS());
+            newammtwrstatus.Add("TOWER2", new AMMTWRSTATUS());
+            newammtwrstatus.Add("TOWER3", new AMMTWRSTATUS());
+            newammtwrstatus.Add("TOWER4", new AMMTWRSTATUS());
+
+            newammtwrstatus["TOWER1"].reelonoff = "OFF";
+            newammtwrstatus["TOWER2"].reelonoff = "OFF";
+            newammtwrstatus["TOWER3"].reelonoff = "OFF";
+            newammtwrstatus["TOWER4"].reelonoff = "OFF";
+            newammtwrstatus["TOWER1"].towerjobstate = "RUN";
+            newammtwrstatus["TOWER2"].towerjobstate = "RUN";
+            newammtwrstatus["TOWER3"].towerjobstate = "RUN";
+            newammtwrstatus["TOWER4"].towerjobstate = "RUN";
+
+
+
         }
         #endregion
 
@@ -1069,7 +1330,15 @@ namespace TechFloor
                 Pair<DateTime, MaterialStoragePacket> packet_ = packets_.First();
                 if ((DateTime.Now - packets_.First().first).TotalSeconds > Config.TimeoutOfReject)
                 {
-                    SendMessageToReelHandler(packet_.second.Command, packet_.second.Data, packet_.second.TowerId, packet_.second.State, packet_.second.Code, packet_.second.Message);
+                    //210202 Reel On 아닌데 UnloadComplete 전송해야하면 삭제부분추가
+                    if (packet_.second.Command == ReelTowerCommands.REQUEST_UNLOAD_COMPLETE && ammtwrstatus["TOWER" + packet_.second.TowerId.Substring(4,1)].reelonoff == "OFF")
+                    {                        
+                        RemoveWaitResponsePacket(packet_.second.TowerId, (packet_.second.Data as ProvideMaterialData).Name);
+                    }
+                    else
+                    {
+                        SendMessageToReelHandler(packet_.second.Command, packet_.second.Data, packet_.second.TowerId, packet_.second.State, packet_.second.Code, packet_.second.Message);
+                    }
                     IsPossibleToRejectReel = false;
                 }
             }
@@ -2217,7 +2486,7 @@ namespace TechFloor
 
                                                                                                 string towername_ = ReelTowerGroupObject.GetTowerNameById(obj_.Id);
                                                                                                 CloseManagedInformation(obj_.Index);
-                                                                                                RemoveWaitResponsePacketByTowerName(towername_, obj_.State == MaterialStorageState.StorageOperationStates.Abort);
+                                                                                                RemoveWaitResponsePacketByTowerName(towername_, obj_.State == MaterialStorageState.StorageOperationStates.Abort);                                                                                                
                                                                                             }
                                                                                             break;
                                                                                     }
@@ -2254,7 +2523,7 @@ namespace TechFloor
                                                         {
                                                             string trans_towerid_ = ReelTowerGroupObject.GetTowerNameById(towerid_);
                                                             try
-                                                            {
+                                                            {                                                                
                                                                 res_ = SetLoadComplete(AMMBarcode_[trans_towerid_], AMMWebServiceResult);
                                                             }
                                                             catch (Exception exp)
@@ -2279,15 +2548,15 @@ namespace TechFloor
                                                                 Logger.Alarm($"AMM Alarm=SetLoadComplete:{res_}");
                                                             }
 
-                                                            if (AMMBarcode_[trans_towerid_].LoadType.ToString().ToUpper() != "CART")
-                                                            {
-                                                                if (SetEqStatus("RUN", "COMPLETE") == "NG")
-                                                                {
-                                                                    CommunicationStatesOfAMM = CommunicationStates.Disconnected;
-                                                                    CommunicationWaitOfAMM = CommunicationStates.None;
-                                                                    Logger.Alarm($"AMM Alarm=SetEqStatus:NG");
-                                                                }
-                                                            }
+                                                            //if (AMMBarcode_[trans_towerid_].LoadType.ToString().ToUpper() != "CART")
+                                                            //{
+                                                            //    //if (SetEqStatus("RUN", "COMPLETE") == "NG")
+                                                            //    //{
+                                                            //    //    CommunicationStatesOfAMM = CommunicationStates.Disconnected;
+                                                            //    //    CommunicationWaitOfAMM = CommunicationStates.None;
+                                                            //    //    Logger.Alarm($"AMM Alarm=SetEqStatus:NG");
+                                                            //    //}
+                                                            //}
 
                                                             if (preparetowerinfo.ContainsKey(trans_towerid_))
                                                                 preparetowerinfo[trans_towerid_].preparesuccess = true;
@@ -2309,76 +2578,16 @@ namespace TechFloor
                                                                     {
                                                                         // AMM에서 Job 생성하여 전송 시 pickingid가 저장되나
                                                                         // Enqueue 버튼으로 Job 생성 시 pickingid가 저장되지않음
+                                                                        string trans_towerid_ = ReelTowerGroupObject.GetTowerNameById(towerid_);
                                                                         if (!string.IsNullOrEmpty(pickingid))
                                                                         {
-                                                                            try
-                                                                            {
-                                                                                res_ = SetUnloadOut(carriername_, AMMWebServiceResult);
-                                                                            }
-                                                                            catch
-                                                                            {
-                                                                                res_ = "FAILDE_WEBSERVICE";
-                                                                                AMMWebServiceResult = false;
-                                                                                SetUnloadOut(carriername_, AMMWebServiceResult);
-                                                                                Logger.Alarm($"AMM Alarm=SetUnloadOut:{res_}");
-                                                                            }
-
-                                                                            if (res_ == "FAILDE_WEBSERVICE")
-                                                                            {
-                                                                                AMMWebServiceResult = false;
-                                                                                Logger.Alarm($"AMM Alarm=SetUnloadOut:{res_}");
-
-                                                                                if (!AMMstatusUpdateTimer.Enabled)
-                                                                                    AMMstatusUpdateTimer.Enabled = true;
-                                                                            }
-                                                                            else if (res_ == "NG")
-                                                                            {
-                                                                                CommunicationStatesOfAMM = CommunicationStates.Disconnected;
-                                                                                CommunicationWaitOfAMM = CommunicationStates.None;
-                                                                                Logger.Alarm($"AMM Alarm=SetUnloadOut:{res_}");
-                                                                            }
-
-                                                                            ProvideJobManager.RemoveItem(pickingid, carriername_);
-
-                                                                            //pickinguids[pickingid].Remove(carriername_);
-                                                                            //pickingsids[pickingid].Remove(pickingsid[0]);
-                                                                            //pickingsid.Remove(pickingsid[0]);
-                                                                            //pickinguid.Remove(carriername_);
-
-                                                                            //if (pickingid.Count() == 0)
-                                                                            //if (pickinguids[pickingid].Count() == 0)
-                                                                            if (ProvideJobManager.IsCompleted(pickingid))
-                                                                            {
-                                                                                try
-                                                                                {
-                                                                                    if (SetUnloadEnd(pickingid) == "NG")
-                                                                                    {
-                                                                                        CommunicationStatesOfAMM = CommunicationStates.Disconnected;
-                                                                                        CommunicationWaitOfAMM = CommunicationStates.None;
-                                                                                        Logger.Alarm($"AMM Alarm=SetUnloadEnd:NG");
-                                                                                    }
-                                                                                }
-                                                                                finally
-                                                                                {
-                                                                                    if (SetEqStatus("RUN", "COMPLETE") == "NG")
-                                                                                    {
-                                                                                        CommunicationStatesOfAMM = CommunicationStates.Disconnected;
-                                                                                        CommunicationWaitOfAMM = CommunicationStates.None;
-                                                                                        Logger.Alarm($"AMM Alarm=SetEqStatus:NG");
-                                                                                    }
-
-                                                                                    CommunicationWaitOfAMM = CommunicationStates.None;
-                                                                                    ProvideJobManager.RemoveJob(pickingid);
-                                                                                    // picking_Dictionary_Clear(pickingid);
-                                                                                    pickingid = string.Empty;
-                                                                                }
-                                                                            }
+                                                                            SetUnloadOut(carriername_, AMMWebServiceResult, trans_towerid_);                                                                            
                                                                         }
                                                                         else
                                                                         {
                                                                             try
                                                                             {
-                                                                                res_ = SetUnloadOut_Manual(carriername_, AMMWebServiceResult);
+                                                                                res_ = SetUnloadOut_Manual(carriername_, AMMWebServiceResult, trans_towerid_);
                                                                             }
                                                                             catch (Exception exp)
                                                                             {
@@ -2387,6 +2596,16 @@ namespace TechFloor
                                                                                 SetUnloadOut_Manual(carriername_, AMMWebServiceResult);
                                                                                 Logger.Alarm($"AMM Alarm=SetUnloadOut_Manual:{res_}");
                                                                             }
+                                                                            finally
+                                                                            {
+                                                                                if (res_ != "OK" && res_ != "NG")
+                                                                                {
+                                                                                    res_ = "FAILDE_WEBSERVICE";
+                                                                                    AMMWebServiceResult = false;
+                                                                                    SetUnloadOut_Manual(carriername_, AMMWebServiceResult);
+                                                                                    Logger.Alarm($"AMM Alarm=SetUnloadOut_Manual:{res_}");
+                                                                                }
+                                                                            }
                                                                             if (res_ == "FAILDE_WEBSERVICE")
                                                                             {
                                                                                 AMMWebServiceResult = false;
@@ -2400,12 +2619,12 @@ namespace TechFloor
                                                                                 CommunicationWaitOfAMM = CommunicationStates.None;
                                                                                 Logger.Alarm($"AMM Alarm=SetUnloadOut_Manual:{res_}");
                                                                             }
-                                                                            if (SetEqStatus("RUN", "COMPLETE") == "NG")
-                                                                            {
-                                                                                CommunicationStatesOfAMM = CommunicationStates.Disconnected;
-                                                                                CommunicationWaitOfAMM = CommunicationStates.None;
-                                                                                Logger.Alarm($"AMM Alarm=SetEqStatus:NG");
-                                                                            }
+                                                                            //if (SetEqStatus("RUN", "COMPLETE") == "NG")
+                                                                            //{
+                                                                            //    CommunicationStatesOfAMM = CommunicationStates.Disconnected;
+                                                                            //    CommunicationWaitOfAMM = CommunicationStates.None;
+                                                                            //    Logger.Alarm($"AMM Alarm=SetEqStatus:NG");
+                                                                            //}
 
                                                                             ProvideJobManager.RemoveItem(pickingid, carriername_);
                                                                             //pickinguids[pickingid].Remove(carriername_);
@@ -3696,7 +3915,7 @@ namespace TechFloor
                     }
                     break;
                 case ReelTowerCommands.REQUEST_CART_LOAD_FINISH:
-                    if (SetEqStatus("RUN", "COMPLETE") == "NG")
+                    if (SetEqStatus("READY") == "NG")
                     {
                         CommunicationStatesOfAMM = CommunicationStates.Disconnected;
                         Pause(ErrorCode.AMMConnectFailure);
@@ -4018,31 +4237,7 @@ namespace TechFloor
                 }
                 else
                 {
-                    try
-                    {
-                        res_ = SetUnloadOut(uid_, AMMWebServiceResult);
-                    }
-                    catch
-                    {
-                        res_ = "FAILDE_WEBSERVICE";
-                        AMMWebServiceResult = false;
-                        SetUnloadOut(uid_, AMMWebServiceResult);
-                        Logger.Alarm($"AMM Alarm=SetUnloadOut:{res_}");
-                    }
-
-                    if (res_ == "FAILDE_WEBSERVICE")
-                    {
-                        AMMWebServiceResult = false;
-                        Logger.Alarm($"AMM Alarm=SetUnloadOut:{res_}");
-                        if (!AMMstatusUpdateTimer.Enabled)
-                            AMMstatusUpdateTimer.Enabled = true;
-                    }
-                    else if (res_ == "NG")
-                    {
-                        CommunicationStatesOfAMM = CommunicationStates.Disconnected;
-                        CommunicationWaitOfAMM = CommunicationStates.None;
-                        Logger.Alarm($"AMM Alarm=SetUnloadOut:{res_}");
-                    }
+                    SetUnloadOut(uid_, AMMWebServiceResult, "", false);
 
                     empty_ += $"{uid_};";
                 }
@@ -4335,6 +4530,12 @@ namespace TechFloor
         public int preparetoload_retry = 0;
         public bool preparesuccess = false;
         public MaterialData barcode = new MaterialData();
+    }
+
+    public class AMMTWRSTATUS
+    {
+        public string reelonoff = string.Empty;
+        public string towerjobstate = string.Empty;
     }
 }
 #endregion

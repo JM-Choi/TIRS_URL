@@ -13,6 +13,8 @@ using System.Reflection;
 using System.Windows;
 using System.Xml;
 using System.Xml.Linq;
+using System.Text;
+using System.Linq;
 #endregion
 
 #region Program

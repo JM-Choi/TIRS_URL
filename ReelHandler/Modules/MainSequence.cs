@@ -13456,11 +13456,6 @@ namespace TechFloor
                 }
 
                 ReportEvent($"Alarm;{Convert.ToInt32(code)};");
-
-                if (Config.EnableOneshotRecovery && !forcedpause)
-                    FormMessageExt.ShowAlertWithRecovery(message_);
-                else
-                    FormMessageExt.ShowAlert(message_);
                 
                 if (code == ErrorCode.FailedToPickUnloadReel)
                 {
@@ -13470,7 +13465,7 @@ namespace TechFloor
 
                         while (reelcheck)
                         {
-                            FormMessageExt.ShowAlertWithRecovery(message_);
+                            FormMessageExt.ShowAlertWithRecovery(message_, Buttons.Ok, true, 3000);
                             reelcheck = ReelHanlderAMM.Get_Twr_State_Reel("AJ54100", currentUnloadReelTowerId) == "ON";
                         }
                     }
@@ -13479,6 +13474,14 @@ namespace TechFloor
 
                     if (reelsOfOutputStages[currentUnloadReelState.OutputStageIndex - 1].IsFinished())
                         reelsOfOutputStages[currentUnloadReelState.OutputStageIndex - 1].PickState = ReelUnloadReportStates.Complete;
+                }
+                else
+                {
+                    if (Config.EnableOneshotRecovery && !forcedpause)
+                        FormMessageExt.ShowAlertWithRecovery(message_);
+                    else
+                        FormMessageExt.ShowAlert(message_);
+
                 }
             }
             catch (Exception ex)

@@ -3,6 +3,7 @@ using System;
 using System.Diagnostics;
 using System.IO;
 using System.Reflection;
+using System.Text;
 using System.Threading;
 using System.Windows.Forms;
 using System.Xml;
@@ -203,7 +204,26 @@ namespace TechFloor.Components
                     result_.Add(new XAttribute("workdir", workdir));
 
                 if (!string.IsNullOrEmpty(caption))
+                {
+                    if (workdir.Contains("AMM"))
+                    {
+                        string ammPath = @"D:\AMM\Versioninfo.ini";
+                        if (File.Exists(ammPath))
+                        {
+                            using (FileStream fs = new FileStream(ammPath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+                            {
+                                using (StreamReader sw = new StreamReader(fs, Encoding.UTF8))
+                                {
+                                    string contents_ = sw.ReadToEnd();
+                                    caption = caption.Split(':')[0] + ":" + contents_;
+                                }
+                            }
+                        }
+                    }
+
                     result_.Add(new XAttribute("caption", caption));
+                }
+                
 
                 if (!string.IsNullOrEmpty(parent))
                     result_.Add(new XAttribute("parent", parent));

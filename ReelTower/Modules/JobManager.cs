@@ -15,7 +15,7 @@ namespace TechFloor
 
         private object syncobj = new object();
         
-        protected Dictionary<string, ThreeField<string, List<string>, List<string>>> jobs = new Dictionary<string, ThreeField<string, List<string>, List<string>>>();
+        public Dictionary<string, ThreeField<string, List<string>, List<string>>> jobs = new Dictionary<string, ThreeField<string, List<string>, List<string>>>();
 
         public int AddJob(string jobid, string user, List<string> uids)
         {
